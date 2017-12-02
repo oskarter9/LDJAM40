@@ -41,6 +41,7 @@ public class SpawnController : MonoBehaviour {
     {
         for(int i = 0; i<numSpawns; i++)
         {
+            spawns[i] = Instantiate(spawn, new Vector3(-screenSize / 2 + distanceBetweenSpawns / 2 + distanceBetweenSpawns * i, 6, 0), Quaternion.identity);
             GenerateRandomStrip(i);
         }
     }
@@ -49,7 +50,6 @@ public class SpawnController : MonoBehaviour {
     {
         int ric = Random.Range(0, 2);
         Debug.Log(ric);
-        spawns[posSpawn] = Instantiate(spawn, new Vector3(-screenSize / 2 + distanceBetweenSpawns / 2 + distanceBetweenSpawns * posSpawn, 6, 0), Quaternion.identity);
         velocities[posSpawn] = Random.Range(2, 6);
 
         if (ric == 1) strip.CreateBlueStrip(Random.Range(3, 8), posSpawn, spawns[posSpawn]);
