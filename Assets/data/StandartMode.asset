@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: StandartMode
   m_EditorClassIdentifier: 
   accelerationTimeGrounded: 0.08
-  moveSpeed: 16.12
-  dashForce: 25
+  moveSpeed: 15
+  dashForce: 200
   gravity: -100
   dashFrequency: -1
