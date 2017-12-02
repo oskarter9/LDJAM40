@@ -24,7 +24,7 @@ public class SubStrip : MonoBehaviour {
     private void OnTriggerEnter2D (Collider2D collider)
     {
 
-        if (collider.gameObject.tag == "Floor")
+        if (collider.gameObject.tag == "Floor" )
         {
             int index = System.Array.IndexOf(refStrips, this.gameObject.transform.parent);
 
@@ -38,6 +38,19 @@ public class SubStrip : MonoBehaviour {
            
             //a ver marc, te comento, este codiguin que pone aqui arriba es una sacada de polla bastante maja. Detecta a que strip corresponde la colision de ese substrip
             //asi que tendremos que cambiar unas cositas. AHORA VUELVO
+        }
+
+        if (collider.gameObject.tag == "Player")
+        {
+            int index = System.Array.IndexOf(refStrips, this.gameObject.transform.parent);
+
+            if (refStrips[index].childCount < 2)
+            {
+                spawnControllerRef.GetComponent<SpawnController>().GenerateRandomStrip(index);
+                Debug.Log("sacada");
+            }
+
+            Destroy(this.gameObject);
         }
 
 

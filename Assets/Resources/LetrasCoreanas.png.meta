@@ -1,0 +1,355 @@
+fileFormatVersion: 2
+guid: 746684dfb6f8c934fba73178222f4eae
+timeCreated: 1512254456
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: LetrasCoreanas_0
+    21300002: LetrasCoreanas_2
+    21300004: LetrasCoreanas_3
+    21300006: LetrasCoreanas_4
+    21300008: LetrasCoreanas_5
+    21300010: LetrasCoreanas_6
+    21300012: LetrasCoreanas_7
+    21300014: LetrasCoreanas_8
+    21300016: LetrasCoreanas_9
+    21300018: LetrasCoreanas_11
+    21300020: LetrasCoreanas_13
+    21300022: LetrasCoreanas_14
+    21300024: LetrasCoreanas_15
+    21300026: LetrasCoreanas_16
+    21300028: LetrasCoreanas_17
+    21300030: LetrasCoreanas_18
+    21300032: LetrasCoreanas_19
+    21300034: LetrasCoreanas_20
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 600
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: LetrasCoreanas_0
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 1255
+        width: 571
+        height: 666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LetrasCoreanas_2
+      rect:
+        serializedVersion: 2
+        x: 987
+        y: 1255
+        width: 536
+        height: 666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LetrasCoreanas_3
+      rect:
+        serializedVersion: 2
+        x: 1749
+        y: 1255
+        width: 559
+        height: 664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LetrasCoreanas_4
+      rect:
+        serializedVersion: 2
+        x: 2429
+        y: 1253
+        width: 517
+        height: 663
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LetrasCoreanas_5
+      rect:
+        serializedVersion: 2
+        x: 3092
+        y: 1266
+        width: 564
+        height: 655
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LetrasCoreanas_6
+      rect:
+        serializedVersion: 2
+        x: 3809
+        y: 1251
+        width: 556
+        height: 665
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LetrasCoreanas_7
+      rect:
+        serializedVersion: 2
+        x: 4551
+        y: 1248
+        width: 531
+        height: 655
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LetrasCoreanas_8
+      rect:
+        serializedVersion: 2
+        x: 5312
+        y: 1248
+        width: 497
+        height: 648
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LetrasCoreanas_9
+      rect:
+        serializedVersion: 2
+        x: 6014
+        y: 1258
+        width: 485
+        height: 637
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LetrasCoreanas_11
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 326
+        width: 572
+        height: 667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LetrasCoreanas_13
+      rect:
+        serializedVersion: 2
+        x: 986
+        y: 326
+        width: 537
+        height: 667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LetrasCoreanas_14
+      rect:
+        serializedVersion: 2
+        x: 1749
+        y: 326
+        width: 559
+        height: 667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LetrasCoreanas_15
+      rect:
+        serializedVersion: 2
+        x: 2429
+        y: 326
+        width: 517
+        height: 663
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LetrasCoreanas_16
+      rect:
+        serializedVersion: 2
+        x: 3091
+        y: 338
+        width: 567
+        height: 655
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LetrasCoreanas_17
+      rect:
+        serializedVersion: 2
+        x: 3809
+        y: 323
+        width: 556
+        height: 667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LetrasCoreanas_18
+      rect:
+        serializedVersion: 2
+        x: 4551
+        y: 322
+        width: 531
+        height: 654
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LetrasCoreanas_19
+      rect:
+        serializedVersion: 2
+        x: 5312
+        y: 322
+        width: 497
+        height: 648
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LetrasCoreanas_20
+      rect:
+        serializedVersion: 2
+        x: 6014
+        y: 330
+        width: 485
+        height: 639
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
