@@ -15,7 +15,7 @@ public class PlayerInput : MonoBehaviour
 
         player = GetComponent<Player>();
 	}
-	
+
 	// Update is called once per frame
 	private void Update () {
 
@@ -24,13 +24,13 @@ public class PlayerInput : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-
+          
             player.dashing();
-            
+
 
 
         }
-		
-       
+
+
 	}
 }
