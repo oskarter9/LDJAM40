@@ -8,13 +8,11 @@ public class PlayerInput : MonoBehaviour
 {
 	[SerializeField] private PlayerId playerId;
 
-
 	private Player player;
 
 	// Use this for initialization
 	private void Start ()
 	{
-
         player = GetComponent<Player>();
 	}
 
@@ -27,23 +25,25 @@ public class PlayerInput : MonoBehaviour
 		{
 				case PlayerId.Player1:
 					directionalInput = new Vector2(Input.GetAxisRaw(AxisNames.player1Axis), 0);
-					break;
+
+                    if (Input.GetButtonDown(AxisNames.player1Dash))
+                        player.Dashing();
+
+                break;
 					
 				case PlayerId.Player2:
 					directionalInput = new Vector2(Input.GetAxisRaw(AxisNames.player2Axis), 0);
-					break;
-					
-				default:
+
+                    if (Input.GetButtonDown(AxisNames.player2Dash))
+                        player.Dashing();
+                break;
+
+            default:
 					directionalInput = Vector2.zero;
 					break;
 		}
 
         player.SetDirectionalInput(directionalInput);
-
-        if (Input.GetKeyDown(KeyCode.LeftShift))
-        {
-            player.Dashing();
-        }
 	}
 	
 	public enum PlayerId
@@ -54,7 +54,9 @@ public class PlayerInput : MonoBehaviour
 	[System.Serializable]
 	public class AxisNames
 	{
-		public const string  player1Axis = "P1_Horizontal";
-		public const string  player2Axis = "P2_Horizontal";
-	}
+		public static string  player1Axis = "P1_Horizontal";
+		public static string  player2Axis = "P2_Horizontal";
+        public static string  player1Dash = "P1_Dash";
+        public static string  player2Dash = "P2_Dash";
+    }
 }

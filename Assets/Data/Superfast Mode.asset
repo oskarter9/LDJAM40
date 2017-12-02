@@ -9,10 +9,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60cfae8d5b911384ea9e55531ed0ffcb, type: 3}
-  m_Name: StandartMode
+  m_Name: Superfast Mode
   m_EditorClassIdentifier: 
-  accelerationTimeGrounded: 0.08
-  moveSpeed: 15
-  dashForce: 200
-  gravity: -100
+  accelerationTimeGrounded: 0.00001
+  moveSpeed: 164.1
+  dashForce: 22.07
+  gravity: -500
   dashFrequency: -1

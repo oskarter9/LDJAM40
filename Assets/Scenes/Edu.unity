@@ -121,11 +121,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4559455137662496, guid: 9fb3997b6b366a7428b2cfd3b1279e0d, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -1.74
+      value: -1.64
       objectReference: {fileID: 0}
     - target: {fileID: 4559455137662496, guid: 9fb3997b6b366a7428b2cfd3b1279e0d, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.52
+      value: -2.56
       objectReference: {fileID: 0}
     - target: {fileID: 4559455137662496, guid: 9fb3997b6b366a7428b2cfd3b1279e0d, type: 2}
       propertyPath: m_LocalPosition.z
@@ -205,11 +205,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4159493952433582, guid: bfba779e7ce3b674d8dd76cc7db65ae4, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -6
+      value: -5.5
       objectReference: {fileID: 0}
     - target: {fileID: 4159493952433582, guid: bfba779e7ce3b674d8dd76cc7db65ae4, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.6
+      value: -2.54
       objectReference: {fileID: 0}
     - target: {fileID: 4159493952433582, guid: bfba779e7ce3b674d8dd76cc7db65ae4, type: 2}
       propertyPath: m_LocalPosition.z
@@ -253,6 +253,7 @@ GameObject:
   - component: {fileID: 2094691542}
   - component: {fileID: 2094691541}
   - component: {fileID: 2094691540}
+  - component: {fileID: 2094691544}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -283,7 +284,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.1800389, g: 0.19580808, b: 0.2205882, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -322,3 +323,15 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2094691544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2094691539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 11400000, guid: 6d53255b0dc28b24185f13c52ae4fa3d, type: 2}
