@@ -34,5 +34,13 @@ public class Strip : MonoBehaviour {
         {
             Instantiate(blueObjects[0], new Vector3(gO.transform.position.x, gO.transform.position.y + i, gO.transform.position.z), Quaternion.identity, strips[numOfStrips+1]);
         }
-    }     
+    }
+
+    public void CreateRedStrip(int size, int numOfStrips, GameObject gO)
+    {
+        for (int i = 0; i < size; i++)
+        {
+            Instantiate(redObjects[0], new Vector3(gO.transform.position.x, gO.transform.position.y + i, gO.transform.position.z), Quaternion.identity, strips[numOfStrips + 1]);
+        }
+    }
 }
