@@ -59,7 +59,7 @@ public class Controller2D : RaycastController {
 
             if (hit)
             {
-                Debug.Log("colliding");
+                //Debug.Log("colliding");
                 
                 moveAmount.y = (hit.distance - skinWidth) * directionY;
                 rayLength = hit.distance;

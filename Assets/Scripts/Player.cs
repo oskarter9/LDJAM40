@@ -7,7 +7,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
 
-    private float accelerationTimeGrounded;
+    public float accelerationTimeGrounded;
 
     public float moveSpeed = 6f;
     private Vector3 velocity;
@@ -15,7 +15,9 @@ public class Player : MonoBehaviour
 
     public float gravity = -20f;
 
-    private Controller2D controller;
+    [HideInInspector]
+    public Controller2D controller;
+
     private Vector2 directionalInput;
 
 
@@ -29,7 +31,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        CalculateVelocity();
+        CalculateVelocity(0);
 
         controller.Move(velocity * Time.deltaTime, directionalInput);
 
@@ -47,9 +49,12 @@ public class Player : MonoBehaviour
     {
         directionalInput = input;
     }
-    private void CalculateVelocity()
+
+    public void CalculateVelocity(float extraMove)
     {
-        float targetVelocityX = directionalInput.x * moveSpeed;
+
+
+        float targetVelocityX = directionalInput.x * moveSpeed + extraMove;
         velocity.x = Mathf.SmoothDamp(velocity.x, targetVelocityX, ref velocityXSmoothing, accelerationTimeGrounded);
         velocity.y += gravity * Time.deltaTime;
     }
