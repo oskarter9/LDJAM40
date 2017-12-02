@@ -24,8 +24,9 @@ public class PlayerInput : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-            player.CalculateVelocity(300);
-            //Vector2 directionalInput = new Vector2()
+
+            player.dashing();
+            
 
 
         }
