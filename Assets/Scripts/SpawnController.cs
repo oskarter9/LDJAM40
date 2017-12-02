@@ -7,6 +7,8 @@ public class SpawnController : MonoBehaviour {
     public Strip strip;
 
     private GameObject[] spawns;
+    private Transform[] refStrips;
+    private float[] velocities;
 
     [SerializeField]
     private int numSpawns;
@@ -25,8 +27,13 @@ public class SpawnController : MonoBehaviour {
     void Start()
     {
         spawns = new GameObject[numSpawns];
+        velocities = new float[numSpawns];
+        Debug.Log(velocities.Length);
         distanceBetweenSpawns = (float) screenSize / numSpawns;
-
+        refStrips = strip.getStrips();
+        Debug.Log(refStrips.Length);
+        refStrips = DeleteChildlessStrips();
+        Debug.Log(refStrips.Length);
         InitSpawns();
     }
 
@@ -35,11 +42,12 @@ public class SpawnController : MonoBehaviour {
         for(int i = 0; i<numSpawns; i++)
         {
             spawns[i] = Instantiate(spawn, new Vector3(-screenSize/2 + distanceBetweenSpawns/2 + distanceBetweenSpawns * i, 6, 0), Quaternion.identity);
+            velocities[i] = Random.Range(0.5f, 1);
             strip.CreateBlueStrip(Random.Range(3,8), i, spawns[i]);
         }
     }
 
-    bool CheckActiveStrip(GameObject strip)
+    bool CheckActiveStrip(Transform strip)
     {
         if (strip.transform.childCount > 0)
         {
@@ -48,7 +56,7 @@ public class SpawnController : MonoBehaviour {
         return false;
     }
 
-    void MoveStrip(GameObject strip, float vel)
+    void MoveStrip(Transform strip, float vel)
     {
         if(CheckActiveStrip(strip))
         {
@@ -56,8 +64,24 @@ public class SpawnController : MonoBehaviour {
         }
     }
 
+    private Transform[] DeleteChildlessStrips()
+    {
+        Transform[] aux = new Transform[spawns.Length];
+
+        for(int i = 0; i < spawns.Length; i++)
+        {
+            aux[i] = refStrips[i+1];
+        }
+
+        return aux;
+    }
+
     void Update()
     {
+        for(int i = 0; i<refStrips.Length; i++)
+        {    
+            MoveStrip(refStrips[i], velocities[i]);
+        }
     }
 
 

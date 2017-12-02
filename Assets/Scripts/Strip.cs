@@ -13,35 +13,26 @@ public class Strip : MonoBehaviour {
     [SerializeField]
     private Object[] redObjects;
 
-    private Transform[] children;
+    private Transform[] strips;
 
     void Awake()
     {
-        children = GetComponentsInChildren<Transform>();
+        strips = GetComponentsInChildren<Transform>();
 
         blueObjects = Resources.LoadAll(blueLetters, typeof(GameObject));
         redObjects = Resources.LoadAll(redLetters, typeof(GameObject));
     }
 
-	void Start(){
-
-        
-    }
-
-    public Transform[] getChildren()
+    public Transform[] getStrips()
     {
-        return children;
-
-
+        return strips;
     }
 
     public void CreateBlueStrip(int size, int numOfStrips, GameObject gO)
     {
         for(int i = 0; i<size; i++)
         {
-            Instantiate(blueObjects[0], new Vector3(gO.transform.position.x, gO.transform.position.y + i, gO.transform.position.z), Quaternion.identity, children[numOfStrips+1]);
+            Instantiate(blueObjects[0], new Vector3(gO.transform.position.x, gO.transform.position.y + i, gO.transform.position.z), Quaternion.identity, strips[numOfStrips+1]);
         }
-    }
-
-    
+    }     
 }
