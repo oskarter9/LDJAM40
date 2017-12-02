@@ -6,6 +6,7 @@ TagManager:
   tags:
   - asteroid
   - ship
+  - Floor
   layers:
   - Default
   - TransparentFX

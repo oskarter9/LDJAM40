@@ -41,10 +41,19 @@ public class SpawnController : MonoBehaviour {
     {
         for(int i = 0; i<numSpawns; i++)
         {
-            spawns[i] = Instantiate(spawn, new Vector3(-screenSize/2 + distanceBetweenSpawns/2 + distanceBetweenSpawns * i, 6, 0), Quaternion.identity);
-            velocities[i] = Random.Range(0.5f, 1);
-            strip.CreateBlueStrip(Random.Range(3,8), i, spawns[i]);
+            spawns[i] = Instantiate(spawn, new Vector3(-screenSize / 2 + distanceBetweenSpawns / 2 + distanceBetweenSpawns * i, 6, 0), Quaternion.identity);
+            GenerateRandomStrip(i);
         }
+    }
+
+    public void GenerateRandomStrip(int posSpawn)
+    {
+        int ric = Random.Range(0, 2);
+        Debug.Log(ric);
+        velocities[posSpawn] = Random.Range(2, 6);
+
+        if (ric == 1) strip.CreateBlueStrip(Random.Range(3, 8), posSpawn, spawns[posSpawn]);
+        else strip.CreateRedStrip(Random.Range(3, 8), posSpawn, spawns[posSpawn]);
     }
 
     bool CheckActiveStrip(Transform strip)
@@ -62,6 +71,11 @@ public class SpawnController : MonoBehaviour {
         {
             strip.transform.Translate(new Vector3(0, -vel*Time.deltaTime , 0));
         }
+    }
+
+    public Transform[] GetRefStrip()
+    {
+        return refStrips;
     }
 
     private Transform[] DeleteChildlessStrips()
