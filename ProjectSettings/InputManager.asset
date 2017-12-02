@@ -6,7 +6,7 @@ InputManager:
   serializedVersion: 2
   m_Axes:
   - serializedVersion: 3
-    m_Name: Horizontal
+    m_Name: P1_Horizontal
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: left
@@ -14,7 +14,7 @@ InputManager:
     altNegativeButton: a
     altPositiveButton: d
     gravity: 3
-    dead: 0.05
+    dead: 0.2
     sensitivity: 1
     snap: 1
     invert: 0
@@ -22,7 +22,7 @@ InputManager:
     axis: 0
     joyNum: 1
   - serializedVersion: 3
-    m_Name: Horizontal2
+    m_Name: P2_Horizontal
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -30,8 +30,8 @@ InputManager:
     altNegativeButton: 
     altPositiveButton: mouse 0
     gravity: 2
-    dead: 0.01
-    sensitivity: 6
+    dead: 0.2
+    sensitivity: 1
     snap: 1
     invert: 0
     type: 2

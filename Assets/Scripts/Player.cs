@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,99 +8,75 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
 
-    public float accelerationTimeGrounded;
-
-    public float moveSpeed = 6f;
-    public float dashForce = 300f;
-    private Vector3 velocity;
-    private float velocityXSmoothing;
-
-    public float gravity = -20f;
+    public PlayerCommonStats PlayerStats;
+    
+    private Vector3 _velocity;
+    private float _velocityXSmoothing;
 
     //dash
-    public float dashFrequency = 0.5f;
-    private float saveDashFrequency;
-    private float counterdashFrequency = 0f;
-    private bool canDash;
-    
-    [HideInInspector]
-    public Controller2D controller;
-
-    private Vector2 directionalInput;
+    private float _saveDashFrequency;
+    private float _counterdashFrequency = 0f;
+    private bool _canDash;
+    private Controller2D _controller;
+    private Vector2 _directionalInput;
 
 
     // Use this for initialization
     void Start()
     {
-        controller = GetComponent<Controller2D>();
+        _controller = GetComponent<Controller2D>();
 
-        saveDashFrequency = dashFrequency;
-        dashFrequency = -1f;
-        canDash = true;
+        _saveDashFrequency = PlayerStats.dashFrequency;
+        PlayerStats.dashFrequency = -1f;
+        _canDash = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-
-
-
         CalculateVelocity(0);
 
-        controller.Move(velocity * Time.deltaTime, directionalInput);
+        _controller.Move(_velocity * Time.deltaTime, _directionalInput);
 
-        if (controller.collisions.grounded)
+        if (_controller.collisions.grounded)
         {
-
-            velocity.y = 0f;
-
+            _velocity.y = 0f;
         }
 
-        if (dashFrequency == saveDashFrequency)
+        if (Math.Abs(PlayerStats.dashFrequency - _saveDashFrequency) < 0.01)
         {
-
-            counterdashFrequency += Time.deltaTime;
-            if (counterdashFrequency >= dashFrequency)
+            _counterdashFrequency += Time.deltaTime;
+            if (_counterdashFrequency >= PlayerStats.dashFrequency)
             {
                 Debug.Log("canJump = true");
-                canDash = true;
-                dashFrequency = -1;
-                counterdashFrequency = 0f;
-                
+                _canDash = true;
+                PlayerStats.dashFrequency = -1;
+                _counterdashFrequency = 0f;
             }
-
         }
-
-
-
     }
+    
     public void SetDirectionalInput(Vector2 input)
     {
-        directionalInput = input;
+        _directionalInput = input;
     }
 
-    public void dashing()
+    public void Dashing()
     {
-        if (canDash)
+        if (_canDash)
         {
-            CalculateVelocity(dashForce);
-            canDash = false;
-            dashFrequency = saveDashFrequency;
+            CalculateVelocity(PlayerStats.dashForce);
+            _canDash = false;
+            PlayerStats.dashFrequency = _saveDashFrequency;
         }
-
-            
-        
-        
-
 
     }
 
     public void CalculateVelocity(float extraMove)
     {
 
-
-        float targetVelocityX = directionalInput.x * moveSpeed  + extraMove*directionalInput.x;
-        velocity.x = Mathf.SmoothDamp(velocity.x, targetVelocityX, ref velocityXSmoothing, accelerationTimeGrounded);
-        velocity.y += gravity * Time.deltaTime;
+        float targetVelocityX = _directionalInput.x * PlayerStats.moveSpeed  + extraMove*_directionalInput.x;
+        _velocity.x = Mathf.SmoothDamp(_velocity.x, targetVelocityX, ref _velocityXSmoothing, PlayerStats.accelerationTimeGrounded);
+        _velocity.y += PlayerStats.gravity * Time.deltaTime;
     }
 }
