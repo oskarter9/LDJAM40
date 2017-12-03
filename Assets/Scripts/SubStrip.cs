@@ -55,6 +55,7 @@ public class SubStrip : MonoBehaviour {
                 
       
             
+<<<<<<< HEAD
             }
             else
             {
@@ -62,6 +63,10 @@ public class SubStrip : MonoBehaviour {
             }
            
             
+=======
+            }          
+            Destroy(this.gameObject);
+>>>>>>> c2ebf98c73dc7161e87dafa2dc0abe32f5e15650
            
        
         }
@@ -75,6 +80,7 @@ public class SubStrip : MonoBehaviour {
             {
                 enableTimer = true;
                 spawnControllerRef.GetComponent<SpawnController>().GenerateRandomStrip(index);
+<<<<<<< HEAD
                 
 
             }
@@ -82,6 +88,10 @@ public class SubStrip : MonoBehaviour {
             {
                 Destroy(this.gameObject);
             }
+=======
+            }
+            Destroy(this.gameObject);
+>>>>>>> c2ebf98c73dc7161e87dafa2dc0abe32f5e15650
         }
 
 
