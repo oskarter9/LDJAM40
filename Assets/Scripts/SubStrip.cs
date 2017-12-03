@@ -70,8 +70,6 @@ public class SubStrip : MonoBehaviour {
             //SI ES UNA LETRA AZUL LANZAR EVENTO ENGORDAR(PLAYER 2)
             //SI ES UNA LETRA ROJA LANZAR EVENTO ENGORDAR(THIS PLAYER)
 
-            
-
             refStrips = spawnControllerRef.GetComponent<SpawnController>().GetRefStrip();
             int index = System.Array.IndexOf(refStrips, this.gameObject.transform.parent);
 
@@ -90,7 +88,7 @@ public class SubStrip : MonoBehaviour {
 
         else if (collider.gameObject.tag == "Player2")
         {
-            
+
 
             //SI ES UNA LETRA ROJA LANZAR EVENTO ENGORDAR(PLAYER 1)
             //SI ES UNA LETRA AZUL LANZAR EVENTO ENGORDAR(THIS PLAYER)

@@ -95,16 +95,6 @@ public class Player : MonoBehaviour
         _directionalInput = input;
     }
 
-    public Vector2 getDirectionalInput()
-    {
-        return _directionalInput;
-    }
-
-    public Vector3 getVelocityVector()
-    {
-        return _velocity;
-    }
-
     public void Dashing()
     {
         if (_canDash)
@@ -207,15 +197,6 @@ public class Player : MonoBehaviour
 
     }
 
-    public void setVelocityX(float amount)
-    {
-        _velocity.x = amount;
-    }
-
-    public void setVelocityY(float amount)
-    {
-        _velocity.y = amount;
-    }
     public void CalculateVelocity(float extraMove)
     {
 
@@ -223,5 +204,4 @@ public class Player : MonoBehaviour
         _velocity.x = Mathf.SmoothDamp(_velocity.x, targetVelocityX, ref _velocityXSmoothing, PlayerStats.accelerationTimeGrounded);
         _velocity.y += PlayerStats.gravity * Time.deltaTime;
     }
-    
 }
