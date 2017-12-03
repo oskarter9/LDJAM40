@@ -52,7 +52,7 @@ public class SpawnController : MonoBehaviour {
 
         int ric = (int)Random.Range(0, 2);
        
-        velocities[posSpawn] = Random.Range(20, 30);
+        velocities[posSpawn] = Random.Range(5, 10);
 
         if (ric == 1) strip.CreateBlueStrip(Random.Range(3, 8), posSpawn, spawns[posSpawn]);
         else strip.CreateRedStrip(Random.Range(3, 8), posSpawn, spawns[posSpawn]);

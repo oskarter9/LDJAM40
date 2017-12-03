@@ -55,18 +55,11 @@ public class SubStrip : MonoBehaviour {
                 
       
             
-<<<<<<< HEAD
             }
             else
             {
                 Destroy(this.gameObject);
-            }
-           
-            
-=======
-            }          
-            Destroy(this.gameObject);
->>>>>>> c2ebf98c73dc7161e87dafa2dc0abe32f5e15650
+            }        
            
        
         }
@@ -79,19 +72,14 @@ public class SubStrip : MonoBehaviour {
             if (refStrips[index].childCount <4)
             {
                 enableTimer = true;
-                spawnControllerRef.GetComponent<SpawnController>().GenerateRandomStrip(index);
-<<<<<<< HEAD
-                
+                spawnControllerRef.GetComponent<SpawnController>().GenerateRandomStrip(index);                
 
             }
             else
             {
                 Destroy(this.gameObject);
             }
-=======
-            }
-            Destroy(this.gameObject);
->>>>>>> c2ebf98c73dc7161e87dafa2dc0abe32f5e15650
+            
         }
 
 
