@@ -32,8 +32,7 @@ public class SubStrip : MonoBehaviour {
             {
                 spawnControllerRef.GetComponent<SpawnController>().GenerateRandomStrip(index);
             
-            }
-            
+            }          
             Destroy(this.gameObject);
            
             //a ver marc, te comento, este codiguin que pone aqui arriba es una sacada de polla bastante maja. Detecta a que strip corresponde la colision de ese substrip
@@ -48,9 +47,6 @@ public class SubStrip : MonoBehaviour {
             {
                 spawnControllerRef.GetComponent<SpawnController>().GenerateRandomStrip(index);
             }
-
-            pickUpEvent.Raise();
-
             Destroy(this.gameObject);
         }
 
