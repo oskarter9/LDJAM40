@@ -27,7 +27,7 @@ public class PlayerInput : MonoBehaviour
 					directionalInput = new Vector2(Input.GetAxisRaw(AxisNames.player1Axis), 0);
 
                     if (Input.GetButtonDown(AxisNames.player1Dash))
-                        player.Dashing();
+                        this.player.Dashing();
 
                 break;
 					
@@ -35,7 +35,7 @@ public class PlayerInput : MonoBehaviour
 					directionalInput = new Vector2(Input.GetAxisRaw(AxisNames.player2Axis), 0);
 
                     if (Input.GetButtonDown(AxisNames.player2Dash))
-                        player.Dashing();
+                        this.player.Dashing();
                 break;
 
             default:
