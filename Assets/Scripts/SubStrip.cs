@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SubStrip : MonoBehaviour {
 
-
+    public GameEvent HitEvent;
     private GameObject spawnControllerRef;
     Transform[] refStrips;
 
@@ -16,11 +16,6 @@ public class SubStrip : MonoBehaviour {
 
     }
 	
-	// Update is called once per frame
-	void Update () {
-        
-	}
-
     private void OnTriggerEnter2D (Collider2D collider)
     {
 
@@ -31,7 +26,6 @@ public class SubStrip : MonoBehaviour {
             if(refStrips[index].childCount < 2)
             {
                 spawnControllerRef.GetComponent<SpawnController>().GenerateRandomStrip(index);
-                Debug.Log("sacada");
             }
             
             Destroy(this.gameObject);
@@ -47,7 +41,11 @@ public class SubStrip : MonoBehaviour {
             if (refStrips[index].childCount < 2)
             {
                 spawnControllerRef.GetComponent<SpawnController>().GenerateRandomStrip(index);
-                Debug.Log("sacada");
+            }
+
+            if (HitEvent != null)
+            {
+                HitEvent.Raise();
             }
 
             Destroy(this.gameObject);

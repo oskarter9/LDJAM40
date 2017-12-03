@@ -28,12 +28,9 @@ public class SpawnController : MonoBehaviour {
     {
         spawns = new GameObject[numSpawns];
         velocities = new float[numSpawns];
-        Debug.Log(velocities.Length);
         distanceBetweenSpawns = (float) screenSize / numSpawns;
         refStrips = strip.getStrips();
-        Debug.Log(refStrips.Length);
         refStrips = DeleteChildlessStrips();
-        Debug.Log(refStrips.Length);
         InitSpawns();
     }
 
