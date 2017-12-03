@@ -4,13 +4,18 @@ using UnityEngine;
 
 public class SubStrip : MonoBehaviour {
 
-    public GameEvent pickUpEvent;
+    public GameEvent Player1HitByHisColorStrip;
+    public GameEvent Player2HitByHisColorStrip;
     private GameObject spawnControllerRef;
     public Transform[] refStrips;
 
     private bool enableTimer;
     public float maxTimeToDestroyLetter = 0.05f;
     private float currentTimeToDestroyLetter;
+
+    public const string BlueTag = "BlueStrip";
+    public const string RedTag = "RedStrip";
+
 
     // Use this for initialization
     void Start () {
@@ -31,12 +36,24 @@ public class SubStrip : MonoBehaviour {
             {
                 enableTimer = false;
                 Destroy(this.gameObject);
-
-
             }
-            
+        }
+    }
 
+    private void DecideWhichPlayerGrows(Collider2D c)
+    {
+        ColorController colorController = c.gameObject.GetComponent<ColorController>();
 
+        if ((this.gameObject.tag == RedTag && colorController.playerColor == ColorController.PlayerColor.RedColor) ||
+            (this.gameObject.tag == BlueTag && colorController.playerColor == ColorController.PlayerColor.BlueColor))
+        {
+            Player1HitByHisColorStrip.Raise();
+        }
+
+        else if ((this.gameObject.tag == RedTag && colorController.playerColor == ColorController.PlayerColor.BlueColor) ||
+            (this.gameObject.tag == BlueTag && colorController.playerColor == ColorController.PlayerColor.RedColor))
+        {
+            Player2HitByHisColorStrip.Raise();
         }
     }
 
@@ -52,68 +69,61 @@ public class SubStrip : MonoBehaviour {
             {
                 enableTimer = true;
                 spawnControllerRef.GetComponent<SpawnController>().GenerateRandomStrip(index);
-                
-      
-            
             }
             else
             {
                 Destroy(this.gameObject);
             }        
-           
-       
         }
 
         else if (collider.gameObject.tag == "Player1")
         {
 
-            //SI ES UNA LETRA AZUL LANZAR EVENTO ENGORDAR(PLAYER 2)
-            //SI ES UNA LETRA ROJA LANZAR EVENTO ENGORDAR(THIS PLAYER)
+            //TODO ESCALAR PLAYER 1
+
+            DecideWhichPlayerGrows(collider);
 
             refStrips = spawnControllerRef.GetComponent<SpawnController>().GetRefStrip();
+
             int index = System.Array.IndexOf(refStrips, this.gameObject.transform.parent);
 
             if (refStrips[index].childCount <4)
             {
                 enableTimer = true;
                 spawnControllerRef.GetComponent<SpawnController>().GenerateRandomStrip(index);                
-
             }
             else
             {
                 Destroy(this.gameObject);
-            }
-            
+            }            
         }
 
         else if (collider.gameObject.tag == "Player2")
         {
 
-
-            //SI ES UNA LETRA ROJA LANZAR EVENTO ENGORDAR(PLAYER 1)
-            //SI ES UNA LETRA AZUL LANZAR EVENTO ENGORDAR(THIS PLAYER)
+            //TODO ESCALAR PLAYER 2
 
             refStrips = spawnControllerRef.GetComponent<SpawnController>().GetRefStrip();
             int index = System.Array.IndexOf(refStrips, this.gameObject.transform.parent);
+
+        
 
             if (refStrips[index].childCount < 4)
             {
                 enableTimer = true;
                 spawnControllerRef.GetComponent<SpawnController>().GenerateRandomStrip(index);
-
             }
             else
             {
                 Destroy(this.gameObject);
             }
 
-
-
         }
+
 
 
 
     }
 
-    
+
 }

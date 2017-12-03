@@ -9,5 +9,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f1def7d67976d7c40a6f5ef82419e6b5, type: 3}
-  m_Name: J2PickUp
+  m_Name: GrowPlayer2
   m_EditorClassIdentifier: 

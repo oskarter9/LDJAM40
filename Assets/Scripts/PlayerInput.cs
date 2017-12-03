@@ -12,8 +12,22 @@ public class PlayerInput : MonoBehaviour
 
     [SerializeField]
     private bool JumpEnable;
-	// Use this for initialization
-	private void Start ()
+
+    public PlayerId PlayerId1
+    {
+        get
+        {
+            return playerId;
+        }
+
+        set
+        {
+            playerId = value;
+        }
+    }
+
+    // Use this for initialization
+    private void Start ()
 	{
         player = GetComponent<Player>();
 	}
@@ -23,7 +37,7 @@ public class PlayerInput : MonoBehaviour
 	{
 		Vector2 directionalInput;
 		
-		switch (playerId)
+		switch (PlayerId1)
 		{
 				case PlayerId.Player1:
 					directionalInput = new Vector2(Input.GetAxisRaw(AxisNames.player1Axis), 0);

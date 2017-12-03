@@ -25,6 +25,8 @@ GameObject:
   - component: {fileID: 114828111422776190}
   - component: {fileID: 114124763805834568}
   - component: {fileID: 212114562287677084}
+  - component: {fileID: 114212342602004236}
+  - component: {fileID: 114430414834994378}
   m_Layer: 0
   m_Name: Character1 1
   m_TagString: Player1
@@ -110,6 +112,23 @@ MonoBehaviour:
   verticalRaySpacing: 0
   coll: {fileID: 0}
   playerInput: {x: 0, y: 0}
+--- !u!114 &114212342602004236
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1489635219437470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bd283a0baed4284da8ea40dcdc639d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: c8c6278411cd24a43b81baff56f899be, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114271435607494626
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -130,6 +149,23 @@ MonoBehaviour:
   verticalRaySpacing: 0
   coll: {fileID: 0}
   playerInput: {x: 0, y: 0}
+--- !u!114 &114430414834994378
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1489635219437470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bd283a0baed4284da8ea40dcdc639d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: cfa315f0964b9744cadb2ef1eaaad342, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114828111422776190
 MonoBehaviour:
   m_ObjectHideFlags: 1
