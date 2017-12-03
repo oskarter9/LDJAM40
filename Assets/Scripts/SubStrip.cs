@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using EazyTools.SoundManager;
 
 public class SubStrip : MonoBehaviour {
 
@@ -13,9 +14,8 @@ public class SubStrip : MonoBehaviour {
 
         spawnControllerRef = GameObject.Find("SpawnController");
         refStrips = spawnControllerRef.GetComponent<SpawnController>().GetRefStrip();
-
     }
-	
+
     private void OnTriggerEnter2D (Collider2D collider)
     {
 

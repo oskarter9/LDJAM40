@@ -1,9 +1,9 @@
 // Shader created with Shader Forge v1.38 
 // Shader Forge (c) Neat Corporation / Joachim Holmer - http://www.acegikmo.com/shaderforge/
 // Note: Manually altering this data may prevent you from opening it in Shader Forge
-/*SF_DATA;ver:1.38;sub:START;pass:START;ps:flbk:,iptp:0,cusa:False,bamd:0,cgin:,lico:1,lgpr:1,limd:3,spmd:1,trmd:0,grmd:0,uamb:True,mssp:True,bkdf:True,hqlp:False,rprd:True,enco:False,rmgx:True,imps:True,rpth:0,vtps:0,hqsc:True,nrmq:1,nrsp:0,vomd:0,spxs:False,tesm:0,olmd:1,culm:0,bsrc:0,bdst:1,dpts:2,wrdp:True,dith:0,atcv:False,rfrpo:True,rfrpn:Refraction,coma:15,ufog:True,aust:True,igpj:False,qofs:0,qpre:1,rntp:1,fgom:False,fgoc:False,fgod:False,fgor:False,fgmd:0,fgcr:0.5,fgcg:0.5,fgcb:0.5,fgca:1,fgde:0.01,fgrn:0,fgrf:300,stcl:False,atwp:False,stva:128,stmr:255,stmw:255,stcp:6,stps:0,stfa:0,stfz:0,ofsf:0,ofsu:0,f2p0:False,fnsp:False,fnfb:False,fsmp:False;n:type:ShaderForge.SFN_Final,id:2865,x:32719,y:32712,varname:node_2865,prsc:2|diff-7736-RGB,spec-358-OUT,gloss-1813-OUT;n:type:ShaderForge.SFN_Tex2d,id:7736,x:31921,y:32620,ptovrint:True,ptlb:Base Color,ptin:_MainTex,varname:_MainTex,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,ntxv:0,isnm:False|UVIN-1799-UVOUT;n:type:ShaderForge.SFN_Slider,id:358,x:32063,y:32792,ptovrint:False,ptlb:Metallic,ptin:_Metallic,varname:node_358,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,min:0,cur:0,max:1;n:type:ShaderForge.SFN_Slider,id:1813,x:32082,y:32882,ptovrint:False,ptlb:Gloss,ptin:_Gloss,varname:_Metallic_copy,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,min:0,cur:0.8,max:1;n:type:ShaderForge.SFN_Panner,id:1799,x:31681,y:32620,varname:node_1799,prsc:2,spu:0,spv:0.05|UVIN-8646-UVOUT;n:type:ShaderForge.SFN_TexCoord,id:8646,x:31430,y:32620,varname:node_8646,prsc:2,uv:0,uaff:False;proporder:7736-358-1813;pass:END;sub:END;*/
+/*SF_DATA;ver:1.38;sub:START;pass:START;ps:flbk:,iptp:0,cusa:False,bamd:0,cgin:,lico:1,lgpr:1,limd:3,spmd:1,trmd:0,grmd:0,uamb:True,mssp:True,bkdf:True,hqlp:False,rprd:True,enco:False,rmgx:True,imps:True,rpth:0,vtps:0,hqsc:True,nrmq:1,nrsp:0,vomd:0,spxs:False,tesm:0,olmd:1,culm:0,bsrc:0,bdst:1,dpts:2,wrdp:True,dith:0,atcv:False,rfrpo:True,rfrpn:Refraction,coma:15,ufog:True,aust:True,igpj:False,qofs:0,qpre:1,rntp:1,fgom:False,fgoc:False,fgod:False,fgor:False,fgmd:0,fgcr:0.5,fgcg:0.5,fgcb:0.5,fgca:1,fgde:0.01,fgrn:0,fgrf:300,stcl:False,atwp:False,stva:128,stmr:255,stmw:255,stcp:6,stps:0,stfa:0,stfz:0,ofsf:0,ofsu:0,f2p0:False,fnsp:False,fnfb:False,fsmp:False;n:type:ShaderForge.SFN_Final,id:2865,x:32719,y:32712,varname:node_2865,prsc:2|diff-7736-RGB,spec-358-OUT,gloss-1813-OUT;n:type:ShaderForge.SFN_Tex2d,id:7736,x:31921,y:32620,ptovrint:True,ptlb:Base Color,ptin:_MainTex,varname:_MainTex,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,ntxv:0,isnm:False|UVIN-745-UVOUT;n:type:ShaderForge.SFN_Slider,id:358,x:32250,y:32780,ptovrint:False,ptlb:Metallic,ptin:_Metallic,varname:node_358,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,min:0,cur:0,max:1;n:type:ShaderForge.SFN_Slider,id:1813,x:32250,y:32882,ptovrint:False,ptlb:Gloss,ptin:_Gloss,varname:_Metallic_copy,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,min:0,cur:0.8,max:1;n:type:ShaderForge.SFN_Panner,id:745,x:31679,y:32620,varname:node_745,prsc:2,spu:0,spv:0.2|UVIN-2209-UVOUT;n:type:ShaderForge.SFN_TexCoord,id:2209,x:31395,y:32618,varname:node_2209,prsc:2,uv:0,uaff:False;proporder:7736-358-1813;pass:END;sub:END;*/
 
-Shader "Shader Forge/FloorMenuShader" {
+Shader "Shader Forge/SunMenuShader" {
     Properties {
         _MainTex ("Base Color", 2D) = "white" {}
         _Metallic ("Metallic", Range(0, 1)) = 0
@@ -151,9 +151,9 @@ Shader "Shader Forge/FloorMenuShader" {
                 float LdotH = saturate(dot(lightDirection, halfDirection));
                 float3 specularColor = _Metallic;
                 float specularMonochrome;
-                float4 node_3678 = _Time;
-                float2 node_1799 = (i.uv0+node_3678.g*float2(0,0.05));
-                float4 _MainTex_var = tex2D(_MainTex,TRANSFORM_TEX(node_1799, _MainTex));
+                float4 node_6899 = _Time;
+                float2 node_745 = (i.uv0+node_6899.g*float2(0,0.2));
+                float4 _MainTex_var = tex2D(_MainTex,TRANSFORM_TEX(node_745, _MainTex));
                 float3 diffuseColor = _MainTex_var.rgb; // Need this for specular when using metallic
                 diffuseColor = DiffuseAndSpecularFromMetallic( diffuseColor, specularColor, specularColor, specularMonochrome );
                 specularMonochrome = 1.0-specularMonochrome;
@@ -287,9 +287,9 @@ Shader "Shader Forge/FloorMenuShader" {
                 float LdotH = saturate(dot(lightDirection, halfDirection));
                 float3 specularColor = _Metallic;
                 float specularMonochrome;
-                float4 node_1968 = _Time;
-                float2 node_1799 = (i.uv0+node_1968.g*float2(0,0.05));
-                float4 _MainTex_var = tex2D(_MainTex,TRANSFORM_TEX(node_1799, _MainTex));
+                float4 node_786 = _Time;
+                float2 node_745 = (i.uv0+node_786.g*float2(0,0.2));
+                float4 _MainTex_var = tex2D(_MainTex,TRANSFORM_TEX(node_745, _MainTex));
                 float3 diffuseColor = _MainTex_var.rgb; // Need this for specular when using metallic
                 diffuseColor = DiffuseAndSpecularFromMetallic( diffuseColor, specularColor, specularColor, specularMonochrome );
                 specularMonochrome = 1.0-specularMonochrome;
@@ -382,9 +382,9 @@ Shader "Shader Forge/FloorMenuShader" {
                 
                 o.Emission = 0;
                 
-                float4 node_730 = _Time;
-                float2 node_1799 = (i.uv0+node_730.g*float2(0,0.05));
-                float4 _MainTex_var = tex2D(_MainTex,TRANSFORM_TEX(node_1799, _MainTex));
+                float4 node_7465 = _Time;
+                float2 node_745 = (i.uv0+node_7465.g*float2(0,0.2));
+                float4 _MainTex_var = tex2D(_MainTex,TRANSFORM_TEX(node_745, _MainTex));
                 float3 diffColor = _MainTex_var.rgb;
                 float specularMonochrome;
                 float3 specColor;
