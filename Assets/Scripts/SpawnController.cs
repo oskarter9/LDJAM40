@@ -17,6 +17,7 @@ public class SpawnController : MonoBehaviour {
     private GameObject spawn;
 
     private float distanceBetweenSpawns;
+    [SerializeField]
     private int screenSize = 16;
     
     void Awake()
@@ -41,16 +42,17 @@ public class SpawnController : MonoBehaviour {
     {
         for(int i = 0; i<numSpawns; i++)
         {
-            spawns[i] = Instantiate(spawn, new Vector3(-screenSize / 2 + distanceBetweenSpawns / 2 + distanceBetweenSpawns * i, 6, 0), Quaternion.identity);
+            spawns[i] = Instantiate(spawn, new Vector3(0 + distanceBetweenSpawns / 2 + distanceBetweenSpawns * i, 15, 0), Quaternion.identity);
             GenerateRandomStrip(i);
         }
     }
 
     public void GenerateRandomStrip(int posSpawn)
     {
-        int ric = Random.Range(0, 2);
+
+        int ric = (int)Random.Range(0, 2);
        
-        velocities[posSpawn] = Random.Range(2, 6);
+        velocities[posSpawn] = Random.Range(20, 30);
 
         if (ric == 1) strip.CreateBlueStrip(Random.Range(3, 8), posSpawn, spawns[posSpawn]);
         else strip.CreateRedStrip(Random.Range(3, 8), posSpawn, spawns[posSpawn]);
