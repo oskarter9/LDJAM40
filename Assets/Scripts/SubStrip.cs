@@ -10,7 +10,7 @@ public class SubStrip : MonoBehaviour {
     public Transform[] refStrips;
 
     private bool enableTimer;
-    public float maxTimeToDestroyLetter = 0.05f;
+    public float maxTimeToDestroyLetter = 0.2f;
     private float currentTimeToDestroyLetter;
 
     public const string BlueTag = "BlueStrip";

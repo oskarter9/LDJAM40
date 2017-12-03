@@ -6,6 +6,7 @@ public class GrowingEffect : MonoBehaviour {
 
     private BoxCollider2D boxCollider;
     private SpriteRenderer spriteRenderer;
+    private MeshRenderer neck;
 
     public float GrowByHit;
     private Vector3 growSpeed;
@@ -14,6 +15,7 @@ public class GrowingEffect : MonoBehaviour {
 	void Start () {
         boxCollider = GetComponent<BoxCollider2D>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        neck = GetComponentInChildren<MeshRenderer>();
         growSpeed = new Vector3(1, 1 + GrowByHit, 1);
 	}
 	
@@ -26,6 +28,7 @@ public class GrowingEffect : MonoBehaviour {
     {
         boxCollider.size = new Vector2(boxCollider.size.x, boxCollider.size.y + GrowByHit);
         spriteRenderer.transform.Translate(new Vector3(0, GrowByHit/5f, 0));
+        neck.transform.localScale += new Vector3(0, GrowByHit*1.05f ,0);
         
         
     }
