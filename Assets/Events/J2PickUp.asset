@@ -8,11 +8,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60cfae8d5b911384ea9e55531ed0ffcb, type: 3}
-  m_Name: StandartMode
+  m_Script: {fileID: 11500000, guid: f1def7d67976d7c40a6f5ef82419e6b5, type: 3}
+  m_Name: J2PickUp
   m_EditorClassIdentifier: 
-  accelerationTimeGrounded: 0.08
-  moveSpeed: 15
-  dashForce: 200
-  gravity: -49.999996
-  dashFrequency: -1
