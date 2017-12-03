@@ -33,7 +33,7 @@ public class SpawnController : MonoBehaviour {
         refStrips = strip.getStrips();
 
         refStrips = DeleteChildlessStrips();
-        Debug.Log(refStrips.Length);
+        //Debug.Log(refStrips.Length);
         InitSpawns();
     }
 

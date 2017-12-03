@@ -37,7 +37,7 @@ public class PlayerInput : MonoBehaviour
                         if (Input.GetButtonDown(AxisNames.player1Jump))
                         {
 
-                            Debug.Log("jumping");
+                            //Debug.Log("jumping");
                             this.player.OnJumpInputDown();
                     }
                             
@@ -45,7 +45,7 @@ public class PlayerInput : MonoBehaviour
                         if (Input.GetButtonUp(AxisNames.player1Jump))
                         {
 
-                            Debug.Log("jumping");
+                            //Debug.Log("jumping");
                             this.player.OnJumpInputUp();
                         }
                             

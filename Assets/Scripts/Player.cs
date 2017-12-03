@@ -16,6 +16,10 @@ public class Player : MonoBehaviour
     public Vector2 wallJumpOff;
     public Vector2 wallLeap;
 
+    public float wallSlideSpeedMax = 3f;
+    public float wallStickTime = 0.25f;
+    private float timeToWallUnstick;
+
     private float _maxJumpVelocity;
     private float _minJumpVelocity;
 
@@ -57,8 +61,11 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Debug.Log(_controller.collisions.left);
+        //Debug.Log(_controller.collisions.right);
         
         CalculateVelocity(0);
+        HandleWallSliding();
 
         _controller.Move(_velocity * Time.deltaTime, _directionalInput);
 
@@ -101,7 +108,7 @@ public class Player : MonoBehaviour
 
     public void OnJumpInputDown()
     {
-        
+        //Debug.Log(wallSliding);
         if (wallSliding)
         {
             if (wallDirX == _directionalInput.x)
@@ -135,6 +142,53 @@ public class Player : MonoBehaviour
         {
             _velocity.y = _minJumpVelocity;
         }
+    }
+
+    private void HandleWallSliding()
+    {
+        wallDirX = (_controller.collisions.right) ? 1 : -1;
+        wallSliding = false;
+
+        if ((_controller.collisions.left || _controller.collisions.right ) && !_controller.collisions.grounded && _velocity.y < 0)
+        {
+
+            wallSliding = true;
+
+            if (_velocity.y < -wallSlideSpeedMax)
+            {
+                _velocity.y = -wallSlideSpeedMax;
+            }
+
+            if (timeToWallUnstick > 0f)
+            {
+                _velocityXSmoothing = 0f;
+                _velocity.x = 0f;
+                if (_directionalInput.x != wallDirX && _directionalInput.x != 0f)
+                {
+                    timeToWallUnstick -= Time.deltaTime;
+
+
+                }
+                else
+                {
+                    timeToWallUnstick = wallStickTime;
+                }
+
+
+
+            }
+            else
+            {
+                timeToWallUnstick = wallStickTime;
+            }
+
+
+
+
+        }
+
+
+
     }
 
     public void CalculateVelocity(float extraMove)
