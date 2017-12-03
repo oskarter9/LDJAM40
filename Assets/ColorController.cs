@@ -13,12 +13,12 @@ public class ColorController : MonoBehaviour {
 
         if (playerInput.PlayerId1 == PlayerInput.PlayerId.Player1)
         {
-            playerColor = PlayerColor.RedColor;
+            playerColor = PlayerColor.BlueColor;
         }
 
         else
         {
-            playerColor = PlayerColor.BlueColor;
+            playerColor = PlayerColor.RedColor;
         }
     }
 

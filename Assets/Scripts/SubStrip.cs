@@ -40,9 +40,10 @@ public class SubStrip : MonoBehaviour {
         }
     }
 
-    private void DecideWhichPlayerGrows(Collider2D c)
+    private void Player1GrowsControl(Collider2D c)
     {
         ColorController colorController = c.gameObject.GetComponent<ColorController>();
+
 
         if ((this.gameObject.tag == RedTag && colorController.playerColor == ColorController.PlayerColor.RedColor) ||
             (this.gameObject.tag == BlueTag && colorController.playerColor == ColorController.PlayerColor.BlueColor))
@@ -54,6 +55,24 @@ public class SubStrip : MonoBehaviour {
             (this.gameObject.tag == BlueTag && colorController.playerColor == ColorController.PlayerColor.RedColor))
         {
             Player2HitByHisColorStrip.Raise();
+        }
+    }
+
+    private void Player2GrowsControl(Collider2D c)
+    {
+        ColorController colorController = c.gameObject.GetComponent<ColorController>();
+
+
+        if ((this.gameObject.tag == RedTag && colorController.playerColor == ColorController.PlayerColor.RedColor) ||
+            (this.gameObject.tag == BlueTag && colorController.playerColor == ColorController.PlayerColor.BlueColor))
+        {
+            Player2HitByHisColorStrip.Raise();
+        }
+
+        else if ((this.gameObject.tag == RedTag && colorController.playerColor == ColorController.PlayerColor.BlueColor) ||
+            (this.gameObject.tag == BlueTag && colorController.playerColor == ColorController.PlayerColor.RedColor))
+        {
+            Player1HitByHisColorStrip.Raise();
         }
     }
 
@@ -81,7 +100,7 @@ public class SubStrip : MonoBehaviour {
 
             //TODO ESCALAR PLAYER 1
 
-            DecideWhichPlayerGrows(collider);
+            Player1GrowsControl(collider);
 
             refStrips = spawnControllerRef.GetComponent<SpawnController>().GetRefStrip();
 
@@ -103,10 +122,10 @@ public class SubStrip : MonoBehaviour {
 
             //TODO ESCALAR PLAYER 2
 
-            refStrips = spawnControllerRef.GetComponent<SpawnController>().GetRefStrip();
-            int index = System.Array.IndexOf(refStrips, this.gameObject.transform.parent);
+            Player2GrowsControl(collider);
 
-        
+            refStrips = spawnControllerRef.GetComponent<SpawnController>().GetRefStrip();
+            int index = System.Array.IndexOf(refStrips, this.gameObject.transform.parent); 
 
             if (refStrips[index].childCount < 4)
             {
