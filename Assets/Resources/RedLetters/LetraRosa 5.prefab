@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 212785221877977542}
   m_Layer: 0
   m_Name: LetraRosa 5
-  m_TagString: Untagged
+  m_TagString: RedStrip
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,7 +99,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905642e5766275a46b85db65ac66a624, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickUpEvent: {fileID: 11400000, guid: 4e15f9d5851682148a9c29d6941fe8f9, type: 2}
+  Player1HitByHisColorStrip: {fileID: 11400000, guid: c8c6278411cd24a43b81baff56f899be,
+    type: 2}
+  Player2HitByHisColorStrip: {fileID: 11400000, guid: cfa315f0964b9744cadb2ef1eaaad342,
+    type: 2}
+  refStrips: []
+  maxTimeToDestroyLetter: 0.05
 --- !u!212 &212785221877977542
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -9,6 +9,8 @@ TagManager:
   - Floor
   - Player1
   - Player2
+  - BlueStrip
+  - RedStrip
   layers:
   - Default
   - TransparentFX

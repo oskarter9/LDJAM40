@@ -18,6 +18,7 @@ GameObject:
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
+<<<<<<< HEAD:Assets/Resources/Prefabs/Characters/Character1.prefab
   - component: {fileID: 4969952396104508}
   - component: {fileID: 61825642864863670}
   - component: {fileID: 114870888138003998}
@@ -26,6 +27,17 @@ GameObject:
   - component: {fileID: 212697233693168390}
   - component: {fileID: 50346944665398702}
   - component: {fileID: 114154768697872500}
+=======
+  - component: {fileID: 4391359201413788}
+  - component: {fileID: 61906559770787838}
+  - component: {fileID: 114271435607494626}
+  - component: {fileID: 114085133083214196}
+  - component: {fileID: 114828111422776190}
+  - component: {fileID: 114124763805834568}
+  - component: {fileID: 212114562287677084}
+  - component: {fileID: 114212342602004236}
+  - component: {fileID: 114430414834994378}
+>>>>>>> 75ba716be02963833f639a5d82cc307356d7958a:Assets/Resources/Prefabs/Characters/Character1 1.prefab
   m_Layer: 0
   m_Name: Character1
   m_TagString: Player1
@@ -115,9 +127,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af1ab04f0b302554cac5c65a9d5938ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD:Assets/Resources/Prefabs/Characters/Character1.prefab
   playerId: 0
   JumpEnable: 1
 --- !u!114 &114404988542323026
+=======
+  collisionMask:
+    serializedVersion: 2
+    m_Bits: 256
+  horizontalRayCount: 0
+  verticalRayCount: 0
+  horizontalRaySpacing: 0
+  verticalRaySpacing: 0
+  coll: {fileID: 0}
+  playerInput: {x: 0, y: 0}
+--- !u!114 &114212342602004236
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1489635219437470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bd283a0baed4284da8ea40dcdc639d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: c8c6278411cd24a43b81baff56f899be, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &114271435607494626
+>>>>>>> 75ba716be02963833f639a5d82cc307356d7958a:Assets/Resources/Prefabs/Characters/Character1 1.prefab
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -137,7 +179,28 @@ MonoBehaviour:
   verticalRaySpacing: 0
   coll: {fileID: 0}
   playerInput: {x: 0, y: 0}
+<<<<<<< HEAD:Assets/Resources/Prefabs/Characters/Character1.prefab
 --- !u!114 &114870888138003998
+=======
+--- !u!114 &114430414834994378
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1489635219437470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bd283a0baed4284da8ea40dcdc639d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: cfa315f0964b9744cadb2ef1eaaad342, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &114828111422776190
+>>>>>>> 75ba716be02963833f639a5d82cc307356d7958a:Assets/Resources/Prefabs/Characters/Character1 1.prefab
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
