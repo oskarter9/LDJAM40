@@ -16,6 +16,6 @@ public class Grow : MonoBehaviour {
 
     public void Foo()
     {
-        Debug.Log("Growing");
+        Debug.Log("get fat player 2");
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SubStrip : MonoBehaviour {
 
-
+    public GameEvent pickUpEvent;
     private GameObject spawnControllerRef;
     Transform[] refStrips;
 
@@ -47,8 +47,9 @@ public class SubStrip : MonoBehaviour {
             if (refStrips[index].childCount < 2)
             {
                 spawnControllerRef.GetComponent<SpawnController>().GenerateRandomStrip(index);
-      
             }
+
+            pickUpEvent.Raise();
 
             Destroy(this.gameObject);
         }

@@ -428,28 +428,17 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 454009218}
   m_Script: {fileID: 11500000, guid: fbffe6f492d5cd34686831db4a59a640, type: 3}
---- !u!1 &1152221803 stripped
+--- !u!1 &1507774880 stripped
 GameObject:
-  m_PrefabParentObject: {fileID: 1771336466188570, guid: 9fb3997b6b366a7428b2cfd3b1279e0d,
+  m_PrefabParentObject: {fileID: 1494289557186292, guid: 9fb3997b6b366a7428b2cfd3b1279e0d,
     type: 2}
   m_PrefabInternal: {fileID: 12251047}
---- !u!114 &1152221804
+--- !u!114 &1507774889
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1152221803}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a366da944e7745e49bc890095074c160, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1152221805
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1152221803}
+  m_GameObject: {fileID: 1507774880}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7bd283a0baed4284da8ea40dcdc639d3, type: 3}
@@ -459,8 +448,8 @@ MonoBehaviour:
   Response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1152221804}
-        m_MethodName: Foo
+      - m_Target: {fileID: 1507774890}
+        m_MethodName: GetFat
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -472,6 +461,17 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1507774890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1507774880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f16baf5b23c235448b03d24e34f0ecdd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1946954915
 Prefab:
   m_ObjectHideFlags: 0
@@ -565,6 +565,50 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 83aeb43c60cc30e4d8ab017abc721b44, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &2063807419 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1854766439624670, guid: 83aeb43c60cc30e4d8ab017abc721b44,
+    type: 2}
+  m_PrefabInternal: {fileID: 2060380116}
+--- !u!114 &2063807420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2063807419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a366da944e7745e49bc890095074c160, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2063807421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2063807419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bd283a0baed4284da8ea40dcdc639d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 4e15f9d5851682148a9c29d6941fe8f9, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2063807420}
+        m_MethodName: Foo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &2094691539
 GameObject:
   m_ObjectHideFlags: 0
