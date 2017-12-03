@@ -14,5 +14,5 @@ MonoBehaviour:
   accelerationTimeGrounded: 0.08
   moveSpeed: 15
   dashForce: 200
-  gravity: -100
+  gravity: -49.999996
   dashFrequency: -1

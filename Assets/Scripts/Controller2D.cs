@@ -15,7 +15,9 @@ public class Controller2D : RaycastController {
 	
 	// Update is called once per frame
 	void Update () {
-		
+
+        
+        //Debug.Log(collisions.grounded);
 	}
 
     public void Move(Vector2 moveAmount)
@@ -36,7 +38,14 @@ public class Controller2D : RaycastController {
             collisions.faceDirection = (int)Mathf.Sign(moveAmount.x);
         }
 
-        VerticalCollisions(ref moveAmount);
+        HorizontalCollisions(ref moveAmount);
+
+        if (moveAmount.y != 0)
+        {
+            VerticalCollisions(ref moveAmount);
+        }
+        
+        
         transform.Translate(moveAmount);
 
     }
@@ -63,24 +72,72 @@ public class Controller2D : RaycastController {
                 
                 moveAmount.y = (hit.distance - skinWidth) * directionY;
                 rayLength = hit.distance;
+                collisions.grounded = directionY == -1;
+            }
+
+            
+            Debug.Log(directionY);
+            Debug.Log(collisions.grounded);
+        }
+    }
+
+    private void HorizontalCollisions(ref Vector2 moveAmount)
+    {
+
+        float directionX = collisions.faceDirection;
+        float rayLength = Mathf.Abs(moveAmount.x) + skinWidth;
+
+        if (Mathf.Abs(moveAmount.x) < skinWidth)
+        {
+            rayLength = 2 * skinWidth;
+        }
+
+        for (int i = 0; i < horizontalRayCount; i++)
+        {
+            Vector2 rayOrigin = (directionX == -1) ? raycastOrigins.bottomLeft : raycastOrigins.bottomRight;
+            rayOrigin += Vector2.up * (horizontalRaySpacing * i);
+            RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.right * directionX, rayLength, collisionMask);
+
+            Debug.DrawRay(rayOrigin, Vector2.right * directionX, Color.blue);
+
+            if (hit)
+            {
+
+                if (hit.distance == 0)
+                {
+                    continue;
+
+                }
+
+                moveAmount.x = (hit.distance - skinWidth) * directionX;
+                rayLength = hit.distance;
+
+                collisions.left = directionX == -1;
+                collisions.right = directionX == 1;
 
             }
 
-            collisions.grounded = directionY == -1;
 
         }
+
+
     }
     public struct CollisionInfo
     {
 
         public bool grounded;
+
+        public bool left, right;
+
         public int faceDirection;
         
         public void Reset()
         {
 
             grounded = false;
-            
+
+            right = false;
+            left = false;
         }
 
 

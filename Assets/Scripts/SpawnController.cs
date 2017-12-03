@@ -28,10 +28,10 @@ public class SpawnController : MonoBehaviour {
     {
         spawns = new GameObject[numSpawns];
         velocities = new float[numSpawns];
-        Debug.Log(velocities.Length);
+
         distanceBetweenSpawns = (float) screenSize / numSpawns;
         refStrips = strip.getStrips();
-        Debug.Log(refStrips.Length);
+
         refStrips = DeleteChildlessStrips();
         Debug.Log(refStrips.Length);
         InitSpawns();
@@ -49,7 +49,7 @@ public class SpawnController : MonoBehaviour {
     public void GenerateRandomStrip(int posSpawn)
     {
         int ric = Random.Range(0, 2);
-        Debug.Log(ric);
+       
         velocities[posSpawn] = Random.Range(2, 6);
 
         if (ric == 1) strip.CreateBlueStrip(Random.Range(3, 8), posSpawn, spawns[posSpawn]);

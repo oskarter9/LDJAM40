@@ -10,6 +10,8 @@ public class PlayerInput : MonoBehaviour
 
 	private Player player;
 
+    [SerializeField]
+    private bool JumpEnable;
 	// Use this for initialization
 	private void Start ()
 	{
@@ -26,16 +28,65 @@ public class PlayerInput : MonoBehaviour
 				case PlayerId.Player1:
 					directionalInput = new Vector2(Input.GetAxisRaw(AxisNames.player1Axis), 0);
 
+                    
                     if (Input.GetButtonDown(AxisNames.player1Dash))
                         this.player.Dashing();
+
+                    if (JumpEnable)
+                    {
+                        if (Input.GetButtonDown(AxisNames.player1Jump))
+                        {
+
+                            Debug.Log("jumping");
+                            this.player.OnJumpInputDown();
+                    }
+                            
+
+                        if (Input.GetButtonUp(AxisNames.player1Jump))
+                        {
+
+                            Debug.Log("jumping");
+                            this.player.OnJumpInputUp();
+                        }
+                            
+
+
+                    }
+
+                    
+
 
                 break;
 					
 				case PlayerId.Player2:
 					directionalInput = new Vector2(Input.GetAxisRaw(AxisNames.player2Axis), 0);
 
+                    
                     if (Input.GetButtonDown(AxisNames.player2Dash))
                         this.player.Dashing();
+
+                    if (JumpEnable)
+                    {
+                        if (Input.GetButtonDown(AxisNames.player2Jump))
+                        {
+
+                            Debug.Log("jumping2");
+                            this.player.OnJumpInputDown();
+                        }
+
+
+                        if (Input.GetButtonUp(AxisNames.player2Jump))
+                        {
+
+                            Debug.Log("jumping2");
+                            this.player.OnJumpInputUp();
+                        }
+
+
+
+                    }
+
+
                 break;
 
             default:
@@ -44,7 +95,7 @@ public class PlayerInput : MonoBehaviour
 		}
 
         player.SetDirectionalInput(directionalInput);
-	}
+    }
 	
 	public enum PlayerId
 	{
@@ -54,6 +105,8 @@ public class PlayerInput : MonoBehaviour
 	[System.Serializable]
 	public class AxisNames
 	{
+        public static string player1Jump = "P1_Jump";
+        public static string player2Jump = "P2_Jump";
 		public static string  player1Axis = "P1_Horizontal";
 		public static string  player2Axis = "P2_Horizontal";
         public static string  player1Dash = "P1_Dash";

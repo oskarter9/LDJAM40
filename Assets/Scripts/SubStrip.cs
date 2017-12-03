@@ -31,7 +31,7 @@ public class SubStrip : MonoBehaviour {
             if(refStrips[index].childCount < 2)
             {
                 spawnControllerRef.GetComponent<SpawnController>().GenerateRandomStrip(index);
-                Debug.Log("sacada");
+            
             }
             
             Destroy(this.gameObject);
@@ -47,7 +47,7 @@ public class SubStrip : MonoBehaviour {
             if (refStrips[index].childCount < 2)
             {
                 spawnControllerRef.GetComponent<SpawnController>().GenerateRandomStrip(index);
-                Debug.Log("sacada");
+      
             }
 
             Destroy(this.gameObject);
