@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 using EazyTools.SoundManager;
 
+
 public class EazySoundManagerDemo : MonoBehaviour
 {
     public EazySoundDemoAudioControls[] AudioControls;

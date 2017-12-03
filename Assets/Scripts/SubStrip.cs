@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using EazyTools.SoundManager;
 
 public class SubStrip : MonoBehaviour {
 
@@ -13,14 +14,12 @@ public class SubStrip : MonoBehaviour {
 
         spawnControllerRef = GameObject.Find("SpawnController");
         refStrips = spawnControllerRef.GetComponent<SpawnController>().GetRefStrip();
-
     }
 	
 	// Update is called once per frame
 	void Update () {
-        
 	}
-
+    
     private void OnTriggerEnter2D (Collider2D collider)
     {
 
@@ -31,7 +30,6 @@ public class SubStrip : MonoBehaviour {
             if(refStrips[index].childCount < 2)
             {
                 spawnControllerRef.GetComponent<SpawnController>().GenerateRandomStrip(index);
-                Debug.Log("sacada");
             }
             
             Destroy(this.gameObject);
