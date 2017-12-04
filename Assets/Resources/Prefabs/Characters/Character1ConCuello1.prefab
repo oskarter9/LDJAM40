@@ -21,9 +21,9 @@ GameObject:
   - component: {fileID: 4980115652562322}
   - component: {fileID: 212437235170164486}
   - component: {fileID: 114058707609539556}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: calavera
-  m_TagString: Untagged
+  m_TagString: Player1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4407958629230566}
   - component: {fileID: 198441658041215260}
   - component: {fileID: 199103699308918200}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: GlowParticlesBlue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 4476595877634212}
   - component: {fileID: 198019360082807306}
   - component: {fileID: 199003146482798798}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Part5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84,7 +84,7 @@ GameObject:
   - component: {fileID: 114098627967226446}
   - component: {fileID: 50613818016922164}
   - component: {fileID: 114140110383919554}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Character1ConCuello1
   m_TagString: Player1
   m_Icon: {fileID: 0}
@@ -99,7 +99,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4016065238482054}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: PinkPlayerHit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116,7 +116,7 @@ GameObject:
   - component: {fileID: 4944466495639490}
   - component: {fileID: 198775183664084266}
   - component: {fileID: 199801541741086324}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Part6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 4091953825375934}
   - component: {fileID: 198133805783513932}
   - component: {fileID: 199661619775844194}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: BlueBits
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -150,7 +150,7 @@ GameObject:
   - component: {fileID: 4238025910641526}
   - component: {fileID: 198403304545505938}
   - component: {fileID: 199952864104485968}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Part3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -167,7 +167,7 @@ GameObject:
   - component: {fileID: 4250166339121250}
   - component: {fileID: 198202761015432956}
   - component: {fileID: 199258112008705344}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Part4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -186,9 +186,9 @@ GameObject:
   - component: {fileID: 23403132540774748}
   - component: {fileID: 61273374188176748}
   - component: {fileID: 114045418998165648}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: cuello
-  m_TagString: Player2
+  m_TagString: Player1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -203,7 +203,7 @@ GameObject:
   - component: {fileID: 4620667154695018}
   - component: {fileID: 198943640450506416}
   - component: {fileID: 199059381217455120}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: TriangleParticles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -220,7 +220,7 @@ GameObject:
   - component: {fileID: 4320903979965632}
   - component: {fileID: 198991955847928600}
   - component: {fileID: 199778248306939642}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Part1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -237,7 +237,7 @@ GameObject:
   - component: {fileID: 4962448690882042}
   - component: {fileID: 198147206804112646}
   - component: {fileID: 199271495699139200}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: SquadParticles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -254,7 +254,7 @@ GameObject:
   - component: {fileID: 4465123704164228}
   - component: {fileID: 198427838033028998}
   - component: {fileID: 199374821193731382}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Part7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -271,7 +271,7 @@ GameObject:
   - component: {fileID: 4254672199012852}
   - component: {fileID: 198535188418396882}
   - component: {fileID: 199140277611154072}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Part2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -286,7 +286,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4601803694639522}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: BluePlayerHit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -303,7 +303,7 @@ GameObject:
   - component: {fileID: 4144663930685270}
   - component: {fileID: 198812235488924278}
   - component: {fileID: 199854383656044734}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: DestroyBlue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -320,7 +320,7 @@ GameObject:
   - component: {fileID: 4328240119732708}
   - component: {fileID: 198645143627438302}
   - component: {fileID: 199327095330692810}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: DashBlue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -337,7 +337,7 @@ GameObject:
   - component: {fileID: 4091671199275748}
   - component: {fileID: 198112926909787886}
   - component: {fileID: 199788781465138402}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: GlowParticlesPink
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -704,7 +704,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.0000017881393, y: 0}
