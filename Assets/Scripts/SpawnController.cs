@@ -61,6 +61,14 @@ public class SpawnController : MonoBehaviour {
         else strip.CreateRedStrip(Random.Range(3, 8), posSpawn, spawns[posSpawn]);
     }
 
+    public int getScreenSize()
+    {
+
+        return screenSize;
+
+
+    }
+
     bool CheckActiveStrip(Transform strip)
     {
         if (strip.transform.childCount > 0)

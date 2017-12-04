@@ -26,8 +26,10 @@ public class PlayerParticleController : MonoBehaviour {
 
     public void PlayDashParticles()
     {
+
         dashParticles.gameObject.SetActive(true);
         dashParticles.Play();
+  
     }
 
     public void PlayHitBlueParticles()
@@ -45,6 +47,9 @@ public class PlayerParticleController : MonoBehaviour {
     public void PlayDestroyP1Particles()
     {
         destroyPlayer1.gameObject.SetActive(true);
+        Destroy(dashParticles);
+        /*Destroy(hitParticlesBlue);
+        Destroy(hitParticlesRed);*/
         destroyPlayer1.Play();
         StartCoroutine(WaitForEndOfParticle(1.0f));
     }
@@ -52,6 +57,9 @@ public class PlayerParticleController : MonoBehaviour {
     public void PlayDestroyP2Particles()
     {
         destroyPlayer2.gameObject.SetActive(true);
+        Destroy(dashParticles);
+       /*Destroy(hitParticlesBlue);
+        Destroy(hitParticlesRed);*/
         destroyPlayer2.Play();
         StartCoroutine(WaitForEndOfParticle(1.0f));
     }

@@ -63,6 +63,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       
         //Debug.Log(_controller.collisions.left);
         //Debug.Log(_controller.collisions.right);
         
