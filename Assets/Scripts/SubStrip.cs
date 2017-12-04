@@ -6,6 +6,11 @@ public class SubStrip : MonoBehaviour {
 
     public GameEvent Player1HitByHisColorStrip;
     public GameEvent Player2HitByHisColorStrip;
+    public GameEvent StripHitP1Red;
+    public GameEvent StripHitP1Blue;
+    public GameEvent StripHitP2Red;
+    public GameEvent StripHitP2Blue;
+
     private GameObject spawnControllerRef;
     public Transform[] refStrips;
 
@@ -81,68 +86,60 @@ public class SubStrip : MonoBehaviour {
 
         if (collider.gameObject.tag == "Floor" )
         {
-            refStrips = spawnControllerRef.GetComponent<SpawnController>().GetRefStrip();
-            int index = System.Array.IndexOf(refStrips, this.gameObject.transform.parent);
-
-            if(refStrips[index].childCount <4)
-            {
-                enableTimer = true;
-                spawnControllerRef.GetComponent<SpawnController>().GenerateRandomStrip(index);
-            }
-            else
-            {
-                Destroy(this.gameObject);
-            }        
+            StripGeneration();  
         }
-
         else if (collider.gameObject.tag == "Player1")
         {
+            if (this.gameObject.tag == RedTag)
+            {
+                if (StripHitP1Red != null)
+                    StripHitP1Red.Raise();
+            }
 
-            //TODO ESCALAR PLAYER 1
+            if (this.gameObject.tag == BlueTag)
+            {
+                if (StripHitP1Blue != null)
+                    StripHitP1Blue.Raise();
+            }
 
             Player1GrowsControl(collider);
 
-            refStrips = spawnControllerRef.GetComponent<SpawnController>().GetRefStrip();
-
-            int index = System.Array.IndexOf(refStrips, this.gameObject.transform.parent);
-
-            if (refStrips[index].childCount <4)
-            {
-                enableTimer = true;
-                spawnControllerRef.GetComponent<SpawnController>().GenerateRandomStrip(index);                
-            }
-            else
-            {
-                Destroy(this.gameObject);
-            }            
+            StripGeneration();         
         }
-
         else if (collider.gameObject.tag == "Player2")
         {
+            if (this.gameObject.tag == RedTag)
+            {
+                if (StripHitP2Red != null)
+                    StripHitP2Red.Raise();
+            }
 
-            //TODO ESCALAR PLAYER 2
+            if (this.gameObject.tag == BlueTag)
+            {
+                if (StripHitP2Blue != null)
+                    StripHitP2Blue.Raise();
+            }
 
             Player2GrowsControl(collider);
 
-            refStrips = spawnControllerRef.GetComponent<SpawnController>().GetRefStrip();
-            int index = System.Array.IndexOf(refStrips, this.gameObject.transform.parent); 
-
-            if (refStrips[index].childCount < 4)
-            {
-                enableTimer = true;
-                spawnControllerRef.GetComponent<SpawnController>().GenerateRandomStrip(index);
-            }
-            else
-            {
-                Destroy(this.gameObject);
-            }
-
+            StripGeneration();
         }
-
-
-
-
     }
 
+    private void StripGeneration()
+    {
+        refStrips = spawnControllerRef.GetComponent<SpawnController>().GetRefStrip();
+        int index = System.Array.IndexOf(refStrips, this.gameObject.transform.parent);
+
+        if (refStrips[index].childCount < 4)
+        {
+            enableTimer = true;
+            spawnControllerRef.GetComponent<SpawnController>().GenerateRandomStrip(index);
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
+    }
 
 }
