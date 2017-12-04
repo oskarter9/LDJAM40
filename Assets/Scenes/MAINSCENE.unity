@@ -7174,6 +7174,14 @@ Prefab:
       propertyPath: destroyPlayer2
       value: 
       objectReference: {fileID: 49298469}
+    - target: {fileID: 4407296098607054, guid: eb5a4d4a3fb4a184b9f110dd114e5064, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 23.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 4407296098607054, guid: eb5a4d4a3fb4a184b9f110dd114e5064, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: eb5a4d4a3fb4a184b9f110dd114e5064, type: 2}
   m_IsPrefabParent: 0
@@ -7802,6 +7810,14 @@ Prefab:
       propertyPath: destroyPlayer1
       value: 
       objectReference: {fileID: 1829521787}
+    - target: {fileID: 4396095002654366, guid: 74ff55f36be2f0a4da2efcdbe658fe7b, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 7.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 4396095002654366, guid: 74ff55f36be2f0a4da2efcdbe658fe7b, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 74ff55f36be2f0a4da2efcdbe658fe7b, type: 2}
   m_IsPrefabParent: 0

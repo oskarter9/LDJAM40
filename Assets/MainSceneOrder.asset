@@ -17,7 +17,7 @@ MonoBehaviour:
   - index: 2
     sceneName: Instrucciones
   - index: 3
-    sceneName: Oliver
+    sceneName: MAINSCENE
   - index: 4
     sceneName: WinP1
   - index: 5
