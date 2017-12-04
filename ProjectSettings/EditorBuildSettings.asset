@@ -12,5 +12,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 63d67cc63a090e9419bac8c98c21bd6c
   - enabled: 1
+    path: Assets/Scenes/Instrucciones.unity
+    guid: ebee0686acbc9ff4d9ef9ae026fe4fe3
+  - enabled: 1
     path: Assets/Scenes/Oliver.unity
     guid: d462538d73da2f644acf3fb9a544c423
+  - enabled: 1
+    path: Assets/Scenes/WinP1.unity
+    guid: d4b7a4286b8b2dc4c922327c3b8e90cb
+  - enabled: 1
+    path: Assets/Scenes/WinP2.unity
+    guid: 19991b64dd28e9d43ad18dad30b10164
