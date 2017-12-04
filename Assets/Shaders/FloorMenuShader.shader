@@ -151,8 +151,8 @@ Shader "Shader Forge/FloorMenuShader" {
                 float LdotH = saturate(dot(lightDirection, halfDirection));
                 float3 specularColor = _Metallic;
                 float specularMonochrome;
-                float4 node_3678 = _Time;
-                float2 node_1799 = (i.uv0+node_3678.g*float2(0,0.05));
+                float4 node_3597 = _Time;
+                float2 node_1799 = (i.uv0+node_3597.g*float2(0,0.05));
                 float4 _MainTex_var = tex2D(_MainTex,TRANSFORM_TEX(node_1799, _MainTex));
                 float3 diffuseColor = _MainTex_var.rgb; // Need this for specular when using metallic
                 diffuseColor = DiffuseAndSpecularFromMetallic( diffuseColor, specularColor, specularColor, specularMonochrome );
@@ -287,8 +287,8 @@ Shader "Shader Forge/FloorMenuShader" {
                 float LdotH = saturate(dot(lightDirection, halfDirection));
                 float3 specularColor = _Metallic;
                 float specularMonochrome;
-                float4 node_1968 = _Time;
-                float2 node_1799 = (i.uv0+node_1968.g*float2(0,0.05));
+                float4 node_9636 = _Time;
+                float2 node_1799 = (i.uv0+node_9636.g*float2(0,0.05));
                 float4 _MainTex_var = tex2D(_MainTex,TRANSFORM_TEX(node_1799, _MainTex));
                 float3 diffuseColor = _MainTex_var.rgb; // Need this for specular when using metallic
                 diffuseColor = DiffuseAndSpecularFromMetallic( diffuseColor, specularColor, specularColor, specularMonochrome );
@@ -382,8 +382,8 @@ Shader "Shader Forge/FloorMenuShader" {
                 
                 o.Emission = 0;
                 
-                float4 node_730 = _Time;
-                float2 node_1799 = (i.uv0+node_730.g*float2(0,0.05));
+                float4 node_4691 = _Time;
+                float2 node_1799 = (i.uv0+node_4691.g*float2(0,0.05));
                 float4 _MainTex_var = tex2D(_MainTex,TRANSFORM_TEX(node_1799, _MainTex));
                 float3 diffColor = _MainTex_var.rgb;
                 float specularMonochrome;

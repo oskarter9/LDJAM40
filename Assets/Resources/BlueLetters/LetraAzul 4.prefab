@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 61071777806033628}
   - component: {fileID: 50406921895979544}
   - component: {fileID: 212570861325604974}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: LetraAzul 4
   m_TagString: BlueStrip
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -103,8 +103,11 @@ MonoBehaviour:
     type: 2}
   Player2HitByHisColorStrip: {fileID: 11400000, guid: cfa315f0964b9744cadb2ef1eaaad342,
     type: 2}
+  StripHitP1Red: {fileID: 11400000, guid: bbf2786b1c827af44880c4f1799438fe, type: 2}
+  StripHitP1Blue: {fileID: 11400000, guid: 585f9e65657070940acee5a1ad7b24e5, type: 2}
+  StripHitP2Red: {fileID: 11400000, guid: 99ed22196dd02a3408dc00a8bbef60d8, type: 2}
+  StripHitP2Blue: {fileID: 11400000, guid: 9ad42184ee687de45a266536f9802627, type: 2}
   refStrips: []
-  maxTimeToDestroyLetter: 0.05
 --- !u!212 &212570861325604974
 SpriteRenderer:
   m_ObjectHideFlags: 1

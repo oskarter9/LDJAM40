@@ -39,6 +39,8 @@ public class Player : MonoBehaviour
     private bool wallSliding;
     private int wallDirX;
 
+    public GameEvent dashEventP1;
+    public GameEvent dashEventP2;
 
     // Use this for initialization
     void Start()
@@ -61,6 +63,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       
         //Debug.Log(_controller.collisions.left);
         //Debug.Log(_controller.collisions.right);
         
@@ -101,8 +104,23 @@ public class Player : MonoBehaviour
             CalculateVelocity(PlayerStats.dashForce);
             _canDash = false;
             PlayerStats.dashFrequency = _saveDashFrequency;
-        }
 
+            if (this.gameObject.tag == "Player1")
+            {
+                if (dashEventP1 != null)
+                {
+                    dashEventP1.Raise();
+                }
+            }
+
+            else if (this.gameObject.tag == "Player2")
+            {
+                if (dashEventP2 != null)
+                {
+                    dashEventP2.Raise();
+                }
+            }           
+        }
     }
 
 
@@ -144,6 +162,21 @@ public class Player : MonoBehaviour
         }
     }
 
+    public Vector3 getVelocityVector()
+    {
+        return _velocity;
+
+    }
+
+    public void setVelocityX (float amount)
+    {
+        _velocity.x = amount;
+
+    }
+    public void setVelocityY(float amount)
+    {
+        _velocity.y = amount;
+    }
     private void HandleWallSliding()
     {
         wallDirX = (_controller.collisions.right) ? 1 : -1;
