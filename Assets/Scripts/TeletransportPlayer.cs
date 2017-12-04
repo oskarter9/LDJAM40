@@ -9,19 +9,22 @@ public class TeletransportPlayer : MonoBehaviour {
 
     public GameObject spawnController;
     private SpawnController spawnContr;
+
+    int size;
 	// Use this for initialization
     
     void Awake()
     {
         spawnContr = spawnController.GetComponent<SpawnController>();
+        
     }
 
 
 	void Start () {
 
-       
+        size = spawnContr.getScreenSize();
 
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -37,7 +40,7 @@ public class TeletransportPlayer : MonoBehaviour {
             controller = collision.gameObject.GetComponent<Controller2D>();
             float value = controller.collisions.faceDirection;
 
-            int size = spawnContr.getScreenSize();
+            
             
             collision.gameObject.transform.position += new Vector3((size) * -value , 0, 0);
 
