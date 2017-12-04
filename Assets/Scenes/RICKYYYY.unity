@@ -7538,18 +7538,23 @@ Prefab:
       propertyPath: destroyPlayer2
       value: 
       objectReference: {fileID: 49298469}
-    - target: {fileID: 61273374188176748, guid: eb5a4d4a3fb4a184b9f110dd114e5064,
+    - target: {fileID: 114074949026376932, guid: eb5a4d4a3fb4a184b9f110dd114e5064,
         type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 50613818016922164, guid: eb5a4d4a3fb4a184b9f110dd114e5064,
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1777061399}
+    - target: {fileID: 114074949026376932, guid: eb5a4d4a3fb4a184b9f110dd114e5064,
         type: 2}
-      propertyPath: m_BodyType
-      value: 1
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: set_enabled
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 61273374188176748, guid: eb5a4d4a3fb4a184b9f110dd114e5064, type: 2}
+    - target: {fileID: 114074949026376932, guid: eb5a4d4a3fb4a184b9f110dd114e5064,
+        type: 2}
+      propertyPath: Event
+      value: 
+      objectReference: {fileID: 11400000, guid: f6e6df9157bc1154390c5984d6c7f31b,
+        type: 2}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: eb5a4d4a3fb4a184b9f110dd114e5064, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1138958566 stripped
@@ -7648,27 +7653,6 @@ Prefab:
       propertyPath: strip
       value: 
       objectReference: {fileID: 1585455650}
-    - target: {fileID: 114870753434181492, guid: b8e100c949911ad4cae5c5931d06beb1,
-        type: 2}
-      propertyPath: powerupFreeze
-      value: 
-      objectReference: {fileID: 1790324705121894, guid: 70a3c14b56288eb41acba753793f5a23,
-        type: 2}
-    - target: {fileID: 114870753434181492, guid: b8e100c949911ad4cae5c5931d06beb1,
-        type: 2}
-      propertyPath: powerupFreezeMinFrequence
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114870753434181492, guid: b8e100c949911ad4cae5c5931d06beb1,
-        type: 2}
-      propertyPath: powerupFreezeMaxFrequence
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114870753434181492, guid: b8e100c949911ad4cae5c5931d06beb1,
-        type: 2}
-      propertyPath: velYPowerup
-      value: 10
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b8e100c949911ad4cae5c5931d06beb1, type: 2}
   m_IsPrefabParent: 0
@@ -7685,7 +7669,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4830953395889336, guid: b39a9c6db9f28cb4d867691aedaf9fac, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -64.39195
+      value: -71.49
       objectReference: {fileID: 0}
     - target: {fileID: 4830953395889336, guid: b39a9c6db9f28cb4d867691aedaf9fac, type: 2}
       propertyPath: m_LocalPosition.z
@@ -8017,6 +8001,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnController: {fileID: 305569885}
+--- !u!223 &1777061399 stripped
+Canvas:
+  m_PrefabParentObject: {fileID: 223782301631836848, guid: eb5a4d4a3fb4a184b9f110dd114e5064,
+    type: 2}
+  m_PrefabInternal: {fileID: 1138958565}
 --- !u!1 &1778169306
 GameObject:
   m_ObjectHideFlags: 0
@@ -8130,6 +8119,11 @@ ParticleSystem:
   m_PrefabParentObject: {fileID: 198812235488924278, guid: eb5a4d4a3fb4a184b9f110dd114e5064,
     type: 2}
   m_PrefabInternal: {fileID: 1138958565}
+--- !u!223 &1831326257 stripped
+Canvas:
+  m_PrefabParentObject: {fileID: 223587231906093898, guid: 74ff55f36be2f0a4da2efcdbe658fe7b,
+    type: 2}
+  m_PrefabInternal: {fileID: 2114395328}
 --- !u!1001 &1974392552
 Prefab:
   m_ObjectHideFlags: 0
@@ -8268,18 +8262,23 @@ Prefab:
       propertyPath: destroyPlayer1
       value: 
       objectReference: {fileID: 1829521787}
-    - target: {fileID: 61270992893935766, guid: 74ff55f36be2f0a4da2efcdbe658fe7b,
+    - target: {fileID: 114422414078836424, guid: 74ff55f36be2f0a4da2efcdbe658fe7b,
         type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 50819005850326920, guid: 74ff55f36be2f0a4da2efcdbe658fe7b,
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1831326257}
+    - target: {fileID: 114422414078836424, guid: 74ff55f36be2f0a4da2efcdbe658fe7b,
         type: 2}
-      propertyPath: m_BodyType
-      value: 1
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: set_enabled
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 61270992893935766, guid: 74ff55f36be2f0a4da2efcdbe658fe7b, type: 2}
+    - target: {fileID: 114422414078836424, guid: 74ff55f36be2f0a4da2efcdbe658fe7b,
+        type: 2}
+      propertyPath: Event
+      value: 
+      objectReference: {fileID: 11400000, guid: d8f22aab56caeb54db806f18b9674228,
+        type: 2}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 74ff55f36be2f0a4da2efcdbe658fe7b, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &2114395329 stripped

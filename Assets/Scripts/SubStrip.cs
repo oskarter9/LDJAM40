@@ -4,15 +4,6 @@ using UnityEngine;
 
 public class SubStrip : MonoBehaviour {
 
-<<<<<<< HEAD
-    public GameEvent pickUpEvent;
-    private GameObject spawnControllerRef;
-    public Transform[] refStrips;
-
-    private bool enableTimer;
-    public float maxTimeToDestroyLetter = 0.05f;
-    private float currentTimeToDestroyLetter;
-=======
     public GameEvent Player1HitByHisColorStrip;
     public GameEvent Player2HitByHisColorStrip;
 
@@ -28,7 +19,6 @@ public class SubStrip : MonoBehaviour {
     public const string BlueTag = "BlueStrip";
     public const string RedTag = "RedStrip";
 
->>>>>>> ricky-save
 
     // Use this for initialization
     void Start () {
@@ -38,18 +28,6 @@ public class SubStrip : MonoBehaviour {
 
     }
 	
-<<<<<<< HEAD
-	// Update is called once per frame
-	void Update () {
-        if (enableTimer)
-        {
-            currentTimeToDestroyLetter += Time.deltaTime;
-
-            if (currentTimeToDestroyLetter >= maxTimeToDestroyLetter)
-            {
-                enableTimer = false;
-                Destroy(this.gameObject);
-=======
 	
 
     private void Player1GrowsControl(Collider2D c)
@@ -69,13 +47,22 @@ public class SubStrip : MonoBehaviour {
             Player2HitByHisColorStrip.Raise();
         }
     }
->>>>>>> ricky-save
+
+    private void Player2GrowsControl(Collider2D c)
+    {
+        ColorController colorController = c.gameObject.GetComponent<ColorController>();
 
 
-            }
-            
+        if ((this.gameObject.tag == RedTag && colorController.playerColor == ColorController.PlayerColor.RedColor) ||
+            (this.gameObject.tag == BlueTag && colorController.playerColor == ColorController.PlayerColor.BlueColor))
+        {
+            Player2HitByHisColorStrip.Raise();
+        }
 
-
+        else if ((this.gameObject.tag == RedTag && colorController.playerColor == ColorController.PlayerColor.BlueColor) ||
+            (this.gameObject.tag == BlueTag && colorController.playerColor == ColorController.PlayerColor.RedColor))
+        {
+            Player1HitByHisColorStrip.Raise();
         }
     }
 
@@ -85,25 +72,7 @@ public class SubStrip : MonoBehaviour {
         if (collider.gameObject.tag == "Floor")
         {
 
-<<<<<<< HEAD
-            if(refStrips[index].childCount <4)
-            {
-                enableTimer = true;
-                spawnControllerRef.GetComponent<SpawnController>().GenerateRandomStrip(index);
-                
-      
-            
-            }
-            else
-            {
-                Destroy(this.gameObject);
-            }        
-           
-       
-        }
-=======
             Destroy(this.gameObject);
->>>>>>> ricky-save
 
         }
         else if (collider.gameObject.tag == "Player1")
@@ -114,25 +83,6 @@ public class SubStrip : MonoBehaviour {
                     StripHitP1Red.Raise();
             }
 
-<<<<<<< HEAD
-            //SI ES UNA LETRA AZUL LANZAR EVENTO ENGORDAR(PLAYER 2)
-            //SI ES UNA LETRA ROJA LANZAR EVENTO ENGORDAR(THIS PLAYER)
-
-            refStrips = spawnControllerRef.GetComponent<SpawnController>().GetRefStrip();
-            int index = System.Array.IndexOf(refStrips, this.gameObject.transform.parent);
-
-            if (refStrips[index].childCount <4)
-            {
-                enableTimer = true;
-                spawnControllerRef.GetComponent<SpawnController>().GenerateRandomStrip(index);                
-
-            }
-            else
-            {
-                Destroy(this.gameObject);
-            }
-            
-=======
             if (this.gameObject.tag == BlueTag)
             {
                 if (StripHitP1Blue != null)
@@ -144,30 +94,13 @@ public class SubStrip : MonoBehaviour {
             Destroy(this.gameObject);
 
 
->>>>>>> ricky-save
         }
         else if (collider.gameObject.tag == "Player2")
         {
-<<<<<<< HEAD
-
-
-            //SI ES UNA LETRA ROJA LANZAR EVENTO ENGORDAR(PLAYER 1)
-            //SI ES UNA LETRA AZUL LANZAR EVENTO ENGORDAR(THIS PLAYER)
-
-            refStrips = spawnControllerRef.GetComponent<SpawnController>().GetRefStrip();
-            int index = System.Array.IndexOf(refStrips, this.gameObject.transform.parent);
-
-            if (refStrips[index].childCount < 4)
-            {
-                enableTimer = true;
-                spawnControllerRef.GetComponent<SpawnController>().GenerateRandomStrip(index);
-
-=======
             if (this.gameObject.tag == RedTag)
             {
                 if (StripHitP2Red != null)
                     StripHitP2Red.Raise();
->>>>>>> ricky-save
             }
 
             if (this.gameObject.tag == BlueTag)
@@ -176,15 +109,6 @@ public class SubStrip : MonoBehaviour {
                     StripHitP2Blue.Raise();
             }
 
-<<<<<<< HEAD
-
-
-        }
-
-
-
-    }
-=======
             Player2GrowsControl(collider);
 
 
@@ -199,7 +123,5 @@ public class SubStrip : MonoBehaviour {
     }
 
    
->>>>>>> ricky-save
 
-    
 }

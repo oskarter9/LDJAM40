@@ -55,3 +55,8 @@ MonoBehaviour:
   numSpawns: 25
   spawn: {fileID: 1046009988894092, guid: d5e06f4253f82b64aa2625a465d9a076, type: 2}
   screenSize: 30
+  powerupFreeze: {fileID: 1790324705121894, guid: 70a3c14b56288eb41acba753793f5a23,
+    type: 2}
+  powerupFreezeMinFrequence: 2
+  powerupFreezeMaxFrequence: 3
+  velYPowerup: 10
