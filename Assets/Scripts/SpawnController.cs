@@ -7,6 +7,8 @@ public class SpawnController : MonoBehaviour {
     public Strip strip;
 
     private GameObject[] spawns;
+
+    
     private Transform[] refStrips;
     private float[] velocities;
 
@@ -19,7 +21,18 @@ public class SpawnController : MonoBehaviour {
     private float distanceBetweenSpawns;
     [SerializeField]
     private int screenSize = 16;
-    
+
+    //powerup freeze
+    public GameObject powerupFreeze;
+    private GameObject prefabPowerupFreeze;
+    private bool powerupIsOnScreen;
+    private bool powerupIsOnTheGround;
+    public float powerupFreezeMinFrequence = 20f;
+    public float powerupFreezeMaxFrequence = 30f;
+    private float counterPowerupFreeze = 0f;
+    private float frequency;
+    public float velYPowerup;
+
     void Awake()
     {
         Debug.Assert(strip);
@@ -27,15 +40,98 @@ public class SpawnController : MonoBehaviour {
 
     void Start()
     {
+        frequency = Random.Range(powerupFreezeMinFrequence, powerupFreezeMaxFrequence);
+
+
+        powerupIsOnTheGround = false;
+        powerupIsOnScreen = false;
+
         spawns = new GameObject[numSpawns];
         velocities = new float[numSpawns];
 
         distanceBetweenSpawns = (float) screenSize / numSpawns;
         refStrips = strip.getStrips();
 
+        
 
         //Debug.Log(refStrips.Length);
         InitSpawns();
+    }
+
+
+
+
+    void Update()
+    {
+        Debug.Log(powerupIsOnScreen);
+        if (!powerupIsOnScreen && !powerupIsOnTheGround)
+        {
+
+            counterPowerupFreeze += Time.deltaTime;
+            if (counterPowerupFreeze >= frequency)
+            {
+                Debug.Log("Spawn freeze powerup");
+                int spawnLocation = Random.Range(0, spawns.Length - 1);
+                prefabPowerupFreeze = Instantiate(powerupFreeze, spawns[spawnLocation].transform.position, Quaternion.identity);
+                Debug.Log("instanciado");
+
+                powerupIsOnScreen = true;
+                powerupIsOnTheGround = false;
+                
+
+
+
+   
+            }
+
+
+
+
+        }
+        if (powerupIsOnScreen && !powerupIsOnTheGround)
+        {
+            Debug.Log("moviendo");
+            MovementPowerup();
+        }
+
+
+        for (int i = 0; i < refStrips.Length; i++)
+        {
+            MoveStrip(refStrips[i], velocities[i]);
+            if (refStrips[i].childCount == 0)
+            {
+                GenerateRandomStrip(i);
+            }
+        }
+    }
+
+
+
+    public void MovementPowerup()
+    {
+
+        prefabPowerupFreeze.transform.Translate(new Vector3(0, -velYPowerup, 0) * Time.deltaTime);
+
+
+
+
+    }
+    public void PowerupIsGrounded()
+    {
+
+        powerupIsOnTheGround = true;
+
+
+    }
+    public void PowerupFreezeIsDestroyed()
+    {
+
+        powerupIsOnScreen = false;
+        powerupIsOnTheGround = false;
+        counterPowerupFreeze = 0f;
+        frequency = Random.Range(powerupFreezeMinFrequence, powerupFreezeMaxFrequence);
+
+        Debug.Log("is destroyed and ready to spawn another one");
     }
 
     void InitSpawns()
@@ -103,17 +199,6 @@ public class SpawnController : MonoBehaviour {
         return aux;
     }
 
-    void Update()
-    {
-        for(int i = 0; i<refStrips.Length; i++)
-        {    
-            MoveStrip(refStrips[i], velocities[i]);
-            if(refStrips[i].childCount == 0)
-            {
-                GenerateRandomStrip(i);
-            }
-        }
-    }
-
+   
 
 }
