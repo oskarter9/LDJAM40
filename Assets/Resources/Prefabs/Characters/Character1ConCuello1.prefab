@@ -1003,6 +1003,7 @@ MonoBehaviour:
   PlayerStats: {fileID: 11400000, guid: 4e6c5b01e768fc14ca22aa341eddd826, type: 2}
   dashEventP1: {fileID: 11400000, guid: 63ab71b53e41c814ab13776e47c7e01e, type: 2}
   dashEventP2: {fileID: 11400000, guid: 7d72f3829f8621b4cbdbe04c7bc26d8b, type: 2}
+  timeToUnfreeze: 3
 --- !u!114 &114569137093016210
 MonoBehaviour:
   m_ObjectHideFlags: 1
