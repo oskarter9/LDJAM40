@@ -84,6 +84,7 @@ GameObject:
   - component: {fileID: 114546789563892854}
   - component: {fileID: 50819005850326920}
   - component: {fileID: 114115595870701086}
+  - component: {fileID: 114172925500290076}
   m_Layer: 10
   m_Name: Character2Concuello1
   m_TagString: Player2
@@ -290,7 +291,7 @@ GameObject:
   - component: {fileID: 23886676078716990}
   - component: {fileID: 114706069364267526}
   m_Layer: 10
-  m_Name: Quad
+  m_Name: cuello
   m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -800,6 +801,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerId: 1
   JumpEnable: 1
+--- !u!114 &114172925500290076
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1170521155837514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bd283a0baed4284da8ea40dcdc639d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 114cacafd4a90a744921f2a68f9f9a15, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114517261939102796}
+        m_MethodName: ChangePlayerColor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114220686054517148
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -914,12 +943,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bd283a0baed4284da8ea40dcdc639d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: f6e6df9157bc1154390c5984d6c7f31b, type: 2}
+  Event: {fileID: 11400000, guid: d8f22aab56caeb54db806f18b9674228, type: 2}
   Response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1403380326053260}
-        m_MethodName: SetActive
+      - m_Target: {fileID: 223587231906093898}
+        m_MethodName: set_enabled
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -943,6 +972,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerInput: {fileID: 0}
+  red: {r: 1, g: 0, b: 0.40784314, a: 1}
+  blue: {r: 0, g: 0.7529412, b: 1, a: 1}
+  blueSkull: {fileID: 21300000, guid: d92732ead69d2204698dfed2f5e90df0, type: 3}
+  redSkull: {fileID: 21300000, guid: f8f80444ec8e71a418be60aebea1c555, type: 3}
 --- !u!114 &114546789563892854
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4565,7 +4598,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1220416763
+  randomSeed: -1482265981
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -7903,7 +7936,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -326362149
+  randomSeed: -348698255
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -11241,7 +11274,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -856542255
+  randomSeed: 1362408019
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -14579,7 +14612,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1412289405
+  randomSeed: 2136069350
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -17917,7 +17950,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1114822150
+  randomSeed: 682507042
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -21255,7 +21288,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 131171762
+  randomSeed: 534550931
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -27943,7 +27976,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1803068678
+  randomSeed: 1223783787
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -38023,7 +38056,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 524485252
+  randomSeed: -587420476
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -41361,7 +41394,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 329956431
+  randomSeed: -1531186368
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -44678,7 +44711,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1400745054
+  randomSeed: 1190317380
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -48726,7 +48759,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 8a63dc04ee601c54ead187d9e3daf6c6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

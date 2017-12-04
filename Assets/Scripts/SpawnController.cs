@@ -63,34 +63,22 @@ public class SpawnController : MonoBehaviour {
 
     void Update()
     {
-        Debug.Log(powerupIsOnScreen);
         if (!powerupIsOnScreen && !powerupIsOnTheGround)
         {
 
             counterPowerupFreeze += Time.deltaTime;
             if (counterPowerupFreeze >= frequency)
             {
-                Debug.Log("Spawn freeze powerup");
                 int spawnLocation = Random.Range(0, spawns.Length - 1);
                 prefabPowerupFreeze = Instantiate(powerupFreeze, spawns[spawnLocation].transform.position, Quaternion.identity);
-                Debug.Log("instanciado");
 
                 powerupIsOnScreen = true;
                 powerupIsOnTheGround = false;
-                
-
-
-
    
             }
-
-
-
-
         }
         if (powerupIsOnScreen && !powerupIsOnTheGround)
         {
-            Debug.Log("moviendo");
             MovementPowerup();
         }
 
@@ -131,7 +119,6 @@ public class SpawnController : MonoBehaviour {
         counterPowerupFreeze = 0f;
         frequency = Random.Range(powerupFreezeMinFrequence, powerupFreezeMaxFrequence);
 
-        Debug.Log("is destroyed and ready to spawn another one");
     }
 
     void InitSpawns()
