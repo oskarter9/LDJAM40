@@ -7,8 +7,6 @@ public class PlayerDestruction : MonoBehaviour {
 
     public GameEvent onDeathP1;
     public GameEvent onDeathP2;
-    public string pathWinJ1;
-    public string pathWinJ2;
 
     private PlayerInput refPlayerInput;
 
@@ -19,26 +17,41 @@ public class PlayerDestruction : MonoBehaviour {
 
         if(c.gameObject.tag=="Player1")
         {
-            Debug.Log("Gana jugador 1");
             if (onDeathP1 != null)
             {
                 c.enabled = false;
                 refPlayerInput.enabled = false;
                 onDeathP1.Raise();
-                GameManager.Instance.sceneLoader.LoadSceneInOrder(GameManager.Instance.sceneLoader.nextSceneToLoadIndex);
+                StartCoroutine(WaitForEndOfGame1(2.0f));
+
             } 
         }
         else if (c.gameObject.tag == "Player2")
         {
-            Debug.Log("Gana jugador 2   ");
             if (onDeathP2 != null)
             {
                 c.enabled = false;
                 refPlayerInput.enabled = false;
                 onDeathP2.Raise();
-                GameManager.Instance.sceneLoader.LoadSceneInOrder(GameManager.Instance.sceneLoader.nextSceneToLoadIndex + 1);
+                StartCoroutine(WaitForEndOfGame2(1.0f));
+
             }
 
         }
+        
+
+    }
+
+    IEnumerator WaitForEndOfGame1(float duration)
+    {
+        yield return new WaitForSeconds(duration);
+        GameManager.Instance.sceneLoader.LoadSceneInOrder(GameManager.Instance.sceneLoader.nextSceneToLoadIndex + 1);
+    }
+
+
+    IEnumerator WaitForEndOfGame2(float duration)
+    {
+        yield return new WaitForSeconds(duration);
+        GameManager.Instance.sceneLoader.LoadSceneInOrder(GameManager.Instance.sceneLoader.nextSceneToLoadIndex);
     }
 }
