@@ -800,7 +800,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4830953395889336, guid: b39a9c6db9f28cb4d867691aedaf9fac, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 10.09
+      value: 2.97
       objectReference: {fileID: 0}
     - target: {fileID: 4830953395889336, guid: b39a9c6db9f28cb4d867691aedaf9fac, type: 2}
       propertyPath: m_LocalPosition.z
