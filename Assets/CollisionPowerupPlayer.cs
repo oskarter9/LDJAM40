@@ -28,9 +28,28 @@ public class CollisionPowerupPlayer : MonoBehaviour {
 
         if (collision.gameObject.tag == "Player1" ||collision.gameObject.tag == "Player2")
         {
-            Destroy(this.gameObject);
-            Debug.Log("destruido");
-            spawnController.PowerupFreezeIsDestroyed();
+
+
+            if (collision.gameObject.tag == "Player1")
+            {
+                GameObject.Find("Character2Concuello").GetComponent<Player>().freeze();
+                Destroy(this.gameObject);
+                Debug.Log("destruido");
+                spawnController.PowerupFreezeIsDestroyed();
+
+            }
+
+            else if (collision.gameObject.tag == "Player2")
+            {
+
+                GameObject.Find("Character1Concuello").GetComponent<Player>().freeze();
+                Destroy(this.gameObject);
+                Debug.Log("destruido");
+                spawnController.PowerupFreezeIsDestroyed();
+
+
+            }
+            
 
 
         }

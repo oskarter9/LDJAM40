@@ -42,11 +42,18 @@ public class Player : MonoBehaviour
     public GameEvent dashEventP1;
     public GameEvent dashEventP2;
 
+    //freeze
+
+    private bool isFrozen;
+    public float timeToUnfreeze = 3f;
+    private float currentTimeToUnfreeze;
+
+
     // Use this for initialization
     void Start()
     {
 
-
+        currentTimeToUnfreeze = 0f;
         _controller = GetComponent<Controller2D>();
 
         PlayerStats.gravity = -(2 * maxJumpHeight) / Mathf.Pow(timeToJumpApex, 2);
@@ -63,35 +70,73 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
-        //Debug.Log(_controller.collisions.left);
-        //Debug.Log(_controller.collisions.right);
         
-        CalculateVelocity(0);
-        HandleWallSliding();
 
-        _controller.Move(_velocity * Time.deltaTime, _directionalInput);
-
-        
-        if (_controller.collisions.grounded)
+        if (!isFrozen)
         {
-            _velocity.y = 0f;
-        }
-       
+            CalculateVelocity(0);
+            HandleWallSliding();
 
-        if (Math.Abs(PlayerStats.dashFrequency - _saveDashFrequency) < 0.01)
-        {
-            _counterdashFrequency += Time.deltaTime;
-            if (_counterdashFrequency >= PlayerStats.dashFrequency)
+            _controller.Move(_velocity * Time.deltaTime, _directionalInput);
+
+
+            if (_controller.collisions.grounded)
             {
-                //Debug.Log("canJump = true");
-                _canDash = true;
-                PlayerStats.dashFrequency = -1;
-                _counterdashFrequency = 0f;
+                _velocity.y = 0f;
             }
+
+
+            if (Math.Abs(PlayerStats.dashFrequency - _saveDashFrequency) < 0.01)
+            {
+                _counterdashFrequency += Time.deltaTime;
+                if (_counterdashFrequency >= PlayerStats.dashFrequency)
+                {
+                    //Debug.Log("canJump = true");
+                    _canDash = true;
+                    PlayerStats.dashFrequency = -1;
+                    _counterdashFrequency = 0f;
+                }
+            }
+
+
         }
+        else
+        {
+
+            Debug.Log("counting time");
+            currentTimeToUnfreeze += Time.deltaTime;
+            if (currentTimeToUnfreeze >= timeToUnfreeze)
+            {
+                unFreeze();
+
+
+
+            }
+
+
+        }
+
+
+        
     }
     
+    public void freeze()
+    {
+        isFrozen = true;
+        Debug.Log("freeze bitch");
+
+    }
+
+    public void unFreeze()
+    {
+        Debug.Log("unfreez bitchhhh");
+        currentTimeToUnfreeze = 0f;
+        isFrozen = false;
+        
+
+
+    }
+
     public void SetDirectionalInput(Vector2 input)
     {
         _directionalInput = input;

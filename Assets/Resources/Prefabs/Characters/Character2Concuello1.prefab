@@ -903,6 +903,7 @@ MonoBehaviour:
   PlayerStats: {fileID: 11400000, guid: 4e6c5b01e768fc14ca22aa341eddd826, type: 2}
   dashEventP1: {fileID: 11400000, guid: 63ab71b53e41c814ab13776e47c7e01e, type: 2}
   dashEventP2: {fileID: 11400000, guid: 7d72f3829f8621b4cbdbe04c7bc26d8b, type: 2}
+  timeToUnfreeze: 3
 --- !u!114 &114422414078836424
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -914,12 +915,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bd283a0baed4284da8ea40dcdc639d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: f6e6df9157bc1154390c5984d6c7f31b, type: 2}
+  Event: {fileID: 11400000, guid: d8f22aab56caeb54db806f18b9674228, type: 2}
   Response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1403380326053260}
-        m_MethodName: SetActive
+      - m_Target: {fileID: 223587231906093898}
+        m_MethodName: set_enabled
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
