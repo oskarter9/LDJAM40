@@ -33,7 +33,7 @@ public class SpawnController : MonoBehaviour {
         distanceBetweenSpawns = (float) screenSize / numSpawns;
         refStrips = strip.getStrips();
 
-        refStrips = DeleteChildlessStrips();
+
         //Debug.Log(refStrips.Length);
         InitSpawns();
     }
@@ -45,6 +45,9 @@ public class SpawnController : MonoBehaviour {
             spawns[i] = Instantiate(spawn, new Vector3(0 + distanceBetweenSpawns / 2 + distanceBetweenSpawns * i, 15, 0), Quaternion.identity);
             GenerateRandomStrip(i);
         }
+
+        refStrips = DeleteChildlessStrips();
+
     }
 
     public void GenerateRandomStrip(int posSpawn)
@@ -97,6 +100,10 @@ public class SpawnController : MonoBehaviour {
         for(int i = 0; i<refStrips.Length; i++)
         {    
             MoveStrip(refStrips[i], velocities[i]);
+            if(refStrips[i].childCount == 0)
+            {
+                GenerateRandomStrip(i);
+            }
         }
     }
 

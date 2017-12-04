@@ -103,8 +103,9 @@ MonoBehaviour:
     type: 2}
   Player2HitByHisColorStrip: {fileID: 11400000, guid: cfa315f0964b9744cadb2ef1eaaad342,
     type: 2}
+  StripHasBeenDestroyed: {fileID: 0}
   refStrips: []
-  maxTimeToDestroyLetter: 0.05
+  maxTimeToDestroyLetter: 0.2
 --- !u!212 &212570861325604974
 SpriteRenderer:
   m_ObjectHideFlags: 1

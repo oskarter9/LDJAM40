@@ -8,11 +8,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8cd0c637c555fa94794cd096b041f53f, type: 3}
-  m_Name: MainSceneOrder
+  m_Script: {fileID: 11500000, guid: f1def7d67976d7c40a6f5ef82419e6b5, type: 3}
+  m_Name: GenerateNewStrip
   m_EditorClassIdentifier: 
-  sceneOrderData:
-  - index: 1
-    sceneName: Menu
-  - index: 2
-    sceneName: Marc3
