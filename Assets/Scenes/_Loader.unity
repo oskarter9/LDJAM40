@@ -141,6 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62cf8c12fac43624bac5b3de458c9428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneLoader: {fileID: 0}
 --- !u!114 &1789149391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,4 +178,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneOrder: {fileID: 11400000, guid: a1f5d8799f9a39349a195753c829f039, type: 2}
-  nextSceneToLoadIndex: 0
+  nextSceneToLoadIndex: 1
