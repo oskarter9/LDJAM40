@@ -15,8 +15,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Instrucciones.unity
     guid: ebee0686acbc9ff4d9ef9ae026fe4fe3
   - enabled: 1
-    path: Assets/Scenes/Oliver.unity
-    guid: d462538d73da2f644acf3fb9a544c423
+    path: Assets/Scenes/MAINSCENE.unity
+    guid: ccf785faaadfa3345a642ed89c29bda0
   - enabled: 1
     path: Assets/Scenes/WinP1.unity
     guid: d4b7a4286b8b2dc4c922327c3b8e90cb
