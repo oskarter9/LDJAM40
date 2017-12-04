@@ -46,7 +46,7 @@ GameObject:
 >>>>>>> parent of 30af2f8... colision entre characters:Assets/Resources/Prefabs/Characters/Character1 1.prefab
   m_Layer: 0
   m_Name: Character1 1
-  m_TagString: Player1
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
