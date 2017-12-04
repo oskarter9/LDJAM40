@@ -84,6 +84,7 @@ GameObject:
   - component: {fileID: 114098627967226446}
   - component: {fileID: 50613818016922164}
   - component: {fileID: 114140110383919554}
+  - component: {fileID: 114145938124835900}
   m_Layer: 9
   m_Name: Character1ConCuello1
   m_TagString: Player1
@@ -912,6 +913,34 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114145938124835900
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1229240218857930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bd283a0baed4284da8ea40dcdc639d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 114cacafd4a90a744921f2a68f9f9a15, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114651019712885642}
+        m_MethodName: ChangePlayerColor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114226187970364664
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1042,6 +1071,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerInput: {fileID: 0}
+  red: {r: 1, g: 0, b: 0.40784314, a: 1}
+  blue: {r: 0, g: 0.7529412, b: 1, a: 1}
+  blueSkull: {fileID: 21300000, guid: d92732ead69d2204698dfed2f5e90df0, type: 3}
+  redSkull: {fileID: 21300000, guid: f8f80444ec8e71a418be60aebea1c555, type: 3}
 --- !u!114 &114671213803382202
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -31336,7 +31369,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -2033470158
+  randomSeed: -1040684080
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -48727,7 +48760,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a6d391f3d70ade5429082e64d10b5740, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
