@@ -39,6 +39,8 @@ public class Player : MonoBehaviour
     private bool wallSliding;
     private int wallDirX;
 
+    public GameEvent dashEventP1;
+    public GameEvent dashEventP2;
 
     // Use this for initialization
     void Start()
@@ -101,8 +103,23 @@ public class Player : MonoBehaviour
             CalculateVelocity(PlayerStats.dashForce);
             _canDash = false;
             PlayerStats.dashFrequency = _saveDashFrequency;
-        }
 
+            if (this.gameObject.tag == "Player1")
+            {
+                if (dashEventP1 != null)
+                {
+                    dashEventP1.Raise();
+                }
+            }
+
+            else if (this.gameObject.tag == "Player2")
+            {
+                if (dashEventP2 != null)
+                {
+                    dashEventP2.Raise();
+                }
+            }           
+        }
     }
 
 

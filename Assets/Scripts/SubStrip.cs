@@ -6,7 +6,13 @@ public class SubStrip : MonoBehaviour {
 
     public GameEvent Player1HitByHisColorStrip;
     public GameEvent Player2HitByHisColorStrip;
-    public GameEvent StripHasBeenDestroyed;
+
+    public GameEvent StripHitP1Red;
+    public GameEvent StripHitP1Blue;
+    public GameEvent StripHitP2Red;
+    public GameEvent StripHitP2Blue;
+
+
     private GameObject spawnControllerRef;
     public Transform[] refStrips;
 
@@ -63,41 +69,59 @@ public class SubStrip : MonoBehaviour {
     public void OnTriggerEnter2D (Collider2D collider)
     {
 
-        if (collider.gameObject.tag == "Floor" )
+        if (collider.gameObject.tag == "Floor")
         {
-            
 
             Destroy(this.gameObject);
-                  
-        }
 
+        }
         else if (collider.gameObject.tag == "Player1")
         {
+            if (this.gameObject.tag == RedTag)
+            {
+                if (StripHitP1Red != null)
+                    StripHitP1Red.Raise();
+            }
 
-            //TODO ESCALAR PLAYER 1
+            if (this.gameObject.tag == BlueTag)
+            {
+                if (StripHitP1Blue != null)
+                    StripHitP1Blue.Raise();
+            }
 
             Player1GrowsControl(collider);
-            
-            //lanza evento a spawncontroller pasandole un parametro con el indice del array refStrips del padre al que esta letra pertenece.
-            //desde spawncontroller se va mirando en cada frame cuantos hijos quedan.
 
             Destroy(this.gameObject);
-                    
-        }
 
+
+        }
         else if (collider.gameObject.tag == "Player2")
         {
+            if (this.gameObject.tag == RedTag)
+            {
+                if (StripHitP2Red != null)
+                    StripHitP2Red.Raise();
+            }
 
-            //TODO ESCALAR PLAYER 2
+            if (this.gameObject.tag == BlueTag)
+            {
+                if (StripHitP2Blue != null)
+                    StripHitP2Blue.Raise();
+            }
+
             Player2GrowsControl(collider);
 
+
             Destroy(this.gameObject);
+           
         }
 
+            
 
 
-
+        
     }
 
+   
 
 }
