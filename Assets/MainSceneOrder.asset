@@ -17,6 +17,8 @@ MonoBehaviour:
   - index: 2
     sceneName: Instrucciones
   - index: 3
+    sceneName: Reglas
+  - index: 3
     sceneName: RICKYYYY
   - index: 4
     sceneName: WinP1
