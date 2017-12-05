@@ -7718,7 +7718,7 @@ Prefab:
         type: 2}
       propertyPath: powerupFreeze
       value: 
-      objectReference: {fileID: 1570066836684504, guid: 70a3c14b56288eb41acba753793f5a23,
+      objectReference: {fileID: 1256865283391404, guid: 70a3c14b56288eb41acba753793f5a23,
         type: 2}
     - target: {fileID: 114870753434181492, guid: b8e100c949911ad4cae5c5931d06beb1,
         type: 2}
@@ -7987,12 +7987,12 @@ Prefab:
     - target: {fileID: 224274767975681902, guid: 9d9d5c942101b5a459140d5153b5d6d6,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 265.5
+      value: 315
       objectReference: {fileID: 0}
     - target: {fileID: 224274767975681902, guid: 9d9d5c942101b5a459140d5153b5d6d6,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 149.5
+      value: 177
       objectReference: {fileID: 0}
     - target: {fileID: 224274767975681902, guid: 9d9d5c942101b5a459140d5153b5d6d6,
         type: 2}
