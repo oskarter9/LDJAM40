@@ -6,6 +6,8 @@ public class CollisionPowerupPlayer : MonoBehaviour {
 
 
     private SpawnController spawnController;
+
+
 	// Use this for initialization
 	void Start () {
         spawnController = GameObject.Find("SpawnController").GetComponent<SpawnController>();
@@ -33,9 +35,11 @@ public class CollisionPowerupPlayer : MonoBehaviour {
             if (collision.gameObject.tag == "Player1")
             {
                 GameObject.Find("Character2Concuello").GetComponent<Player>().freeze();
-                Destroy(this.gameObject);
+
+                
                 Debug.Log("destruido");
                 spawnController.PowerupFreezeIsDestroyed();
+                Destroy(this.gameObject);
 
             }
 
@@ -43,10 +47,11 @@ public class CollisionPowerupPlayer : MonoBehaviour {
             {
 
                 GameObject.Find("Character1Concuello").GetComponent<Player>().freeze();
-                Destroy(this.gameObject);
+
+                
                 Debug.Log("destruido");
                 spawnController.PowerupFreezeIsDestroyed();
-
+                Destroy(this.gameObject);
 
             }
             
