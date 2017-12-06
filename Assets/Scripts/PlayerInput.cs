@@ -40,9 +40,20 @@ public class PlayerInput : MonoBehaviour
 		switch (PlayerId1)
 		{
 				case PlayerId.Player1:
-					directionalInput = new Vector2(Input.GetAxisRaw(AxisNames.player1Axis), 0);
-
+					directionalInput = new Vector2(Input.GetAxisRaw(AxisNames.player1Axis) + Input.GetAxisRaw("HorizontalMovementKeyboard2"), 0);
                     
+
+                    if (directionalInput.x >1)
+                    {
+                        directionalInput.x = 1;
+                    } 
+                    
+                    else if (directionalInput.x < 0)
+                    {
+                    directionalInput.x = -1;
+                    }
+
+
                     if (Input.GetButtonDown(AxisNames.player1Dash))
                         this.player.Dashing();
 
@@ -73,14 +84,28 @@ public class PlayerInput : MonoBehaviour
                 break;
 					
 				case PlayerId.Player2:
-					directionalInput = new Vector2(Input.GetAxisRaw(AxisNames.player2Axis), 0);
+
 
                     
-                    if (Input.GetButtonDown(AxisNames.player2Dash))
+					directionalInput = new Vector2(Input.GetAxisRaw(AxisNames.player2Axis) + Input.GetAxisRaw("HorizontalMovementKeyboard1"), 0);
+
+                    if (directionalInput.x > 1)
+                    {
+                        directionalInput.x = 1;
+                    }
+
+                    else if (directionalInput.x < 0)
+                    {
+                        directionalInput.x = -1;
+                    }
+
+
+                if (Input.GetButtonDown(AxisNames.player2Dash))
                         this.player.Dashing();
 
                     if (JumpEnable)
                     {
+
                         if (Input.GetButtonDown(AxisNames.player2Jump))
                         {
 
