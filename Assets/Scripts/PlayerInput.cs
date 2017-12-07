@@ -48,7 +48,7 @@ public class PlayerInput : MonoBehaviour
                         directionalInput.x = 1;
                     } 
                     
-                    else if (directionalInput.x < 0)
+                    else if (directionalInput.x < -1)
                     {
                     directionalInput.x = -1;
                     }
@@ -94,7 +94,7 @@ public class PlayerInput : MonoBehaviour
                         directionalInput.x = 1;
                     }
 
-                    else if (directionalInput.x < 0)
+                    else if (directionalInput.x < -1)
                     {
                         directionalInput.x = -1;
                     }
