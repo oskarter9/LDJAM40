@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Instrucciones.unity
     guid: ebee0686acbc9ff4d9ef9ae026fe4fe3
   - enabled: 1
+    path: Assets/Scenes/InstruccionesTeclado.unity
+    guid: c23c749d7ab8dcd43bf119c777bf8e5d
+  - enabled: 1
     path: Assets/Scenes/Reglas.unity
     guid: 48b9839be9e76484bbd933c97e59f55b
   - enabled: 1
